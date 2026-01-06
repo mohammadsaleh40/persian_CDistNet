@@ -242,7 +242,8 @@ class LMDBDataset(Dataset):
         with self.env.begin(write=False) as txn:
             image_key, label_key = f'image-{idx+1:09d}', f'label-{idx+1:09d}'
             label = str(txn.get(label_key.encode()), 'utf-8')  # label
-            label = re.sub('[^0-9a-zA-Z]+', '', label)
+            # به خاطر حذف کاراکترهای فارسی حذف شد
+            # label = re.sub('[^0-9a-zA-Z]+', '', label)
             label = label[:30]
 
             imgbuf = txn.get(image_key.encode())  # image
@@ -266,10 +267,10 @@ class LMDBDataset(Dataset):
             ratio = w / h
             image = image.resize(
                 (min(max(int(self.height * ratio), self.height), self.max_width), self.height),
-                Image.ANTIALIAS
+                Image.LANCZOS # تغییر ANTIALIAS به LANCZOS
             )
         else:
-            image = image.resize((self.width, self.height), Image.ANTIALIAS)
+            image = image.resize((self.width, self.height), Image.LANCZOS) # تغییر ANTIALIAS به LANCZOS
         image = np.array(image)
         if self.rgb2gray:
             image = np.expand_dims(image, -1)

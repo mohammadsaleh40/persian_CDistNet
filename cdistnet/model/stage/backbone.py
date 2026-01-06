@@ -350,7 +350,7 @@ class ABI_ResNet(nn.Module):
     def __init__(self, block, layers):
         self.inplanes = 32
         super(ABI_ResNet, self).__init__()
-        self.conv1 = nn.Conv2d(3, 32, kernel_size=3, stride=1, padding=1,
+        self.conv1 = nn.Conv2d(1, 32, kernel_size=3, stride=1, padding=1,
                                bias=False)
         self.bn1 = nn.BatchNorm2d(32)
         self.relu = nn.ReLU(inplace=True)

@@ -104,7 +104,7 @@ def train(model,
         #     torch.save(model.module.state_dict(), '{}/model_epoch_{}_iter_{}.pth'.format(model_dir, epoch, iteration))
         #     logger.info("Saved!")
 
-        if epoch >= 6 and iteration % eval_iter == 0:
+        if iteration % eval_iter == 0:
             eval_loss, eval_acc = eval(
                 model=model,
                 data_loader=val_data_loader,

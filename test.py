@@ -9,7 +9,6 @@ from mmcv import Config
 import numpy as np
 import os
 os.environ["CUDA_VISIBLE_DEVICES"]="1"
-
 # from cdistnet.hdf5loader import make_data_loader
 from cdistnet.model.translator import Translator
 from cdistnet.model.model import build_CDistNet
@@ -69,25 +68,30 @@ def preprocess_image(image_path):
 def origin_process_img(cfg, image_path):
     # self.data=[(img_path,text),...]
     if cfg.rgb2gray:
-        image = Image.open(image_path).convert('L')
+        image = Image.open(image_path).convert('L') # Grayscale -> (H, W)
+        image = image.resize((cfg.width, cfg.height), Image.LANCZOS)
+        image = np.array(image) # (H, W)
+        # تبدیل grayscale به RGB-like (تکرار کانال)
+        # image = np.stack([image, image, image], axis=-1) # (H, W, 3)
+        # یا بهتر، برای PyTorch (C, H, W):
+        image = np.expand_dims(image, axis=0) # (1, H, W)
+        image = np.repeat(image, 3, axis=0) # (3, H, W) - کپی کانال
     else:
-        image = Image.open(image_path).convert('RGB')
-    assert image is not None
-    image = image.resize((cfg.width, cfg.height), Image.ANTIALIAS)
-    image = np.array(image)
-    if cfg.rgb2gray:
-        image = np.expand_dims(image, -1)
-        image = np.expand_dims(image, -1)
-    print(image.shape)
-    image = np.expand_dims(image, -1)
-    image = image.transpose((2, 3, 0, 1))
-    image = image.astype(np.float32) / 128. - 1.
+        image = Image.open(image_path).convert('RGB') # RGB -> (H, W, 3)
+        image = image.resize((cfg.width, cfg.height), Image.LANCZOS)
+        image = np.array(image) # RGB: (H, W, 3)
+        image = image.transpose((2, 0, 1)) # CHW
+
+    # حالا image.shape باید (3, H, W) باشد
+    # برای batch بودن، باید یک بُعد دیگر اضافه کنیم: (1, 3, H, W)
+    image = np.expand_dims(image, axis=0) # (1, 3 or 1, H, W) -> (1, C, H, W)
+
+    # نرمال‌سازی
+    image = image.astype(np.float32) / 127.5 - 1.0
     image = torch.from_numpy(image)
-    # text = self.data[idx][1]
-    # text = [self.word2idx.get(ch, 1) for ch in text]
-    # text.insert(0, 2)
-    # text.append(3)
-    # target = np.array(text)
+    # اطمینان از پیوسته بودن تنسور
+    image = image.contiguous()
+
     return image
 
 
@@ -110,6 +114,7 @@ def test(cfg):
             all_hyp, all_scores = translator.translate_batch(batch[0])
             for idx_seqs in all_hyp:
                 for idx_seq in idx_seqs:
+
                     idx_seq = [x for x in idx_seq if x != 3]
                     pred_line = '{}.png, "'.format(cnt) + ''.join([idx2word[idx] for idx in idx_seq]) + '"'
                     f.write(pred_line + '\n')
@@ -126,8 +131,8 @@ def test_one(cfg, args):
     # en = get_parameter_number(model.transformer.encoder)
     # de = get_parameter_number(model.transformer.decoder)
     # print('encoder:{}\ndecoder:{}\n'.format(en,de))
-    model_path = 'models/new_baseline_dssnetv3_3_32*128_tps_resnet45_epoch_6/epoch9_best_acc.pth'
-    model.load_state_dict(torch.load(model_path))
+    model_path = args.model_path # <-- تغییر این خط
+    model.load_state_dict(torch.load(model_path, map_location='cpu'))
     device = torch.device(cfg.test.device)
     model.to(device)
     model.eval()
@@ -145,6 +150,7 @@ def test_one(cfg, args):
     # print(all_hyp, all_scores)
     for idx_seqs in all_hyp:
         for idx_seq in idx_seqs:
+            # print(f"Raw idx_seq: {idx_seq}") # اضافه کنید
             idx_seq = [x for x in idx_seq if x != 3]
             pred_line = 'Results{}:"'.format(cnt) + ''.join([idx2word[idx] for idx in idx_seq]) + '"'
             res.append('Vocab Prob:{}\nTotal Score:{}\n{}\n\n'\
@@ -161,8 +167,8 @@ def test_demo(args):
 
 def main():
     args = parse_args()
-    print(args.config)
-    print(type(args.config))
+    # print(args.config)
+    # print(type(args.config))
     cfg = Config.fromfile(args.config)
     if args.test_one is True:
         test_one(cfg, args)

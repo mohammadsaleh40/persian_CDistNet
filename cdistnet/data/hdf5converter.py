@@ -57,7 +57,7 @@ def create_hdf5_file(hdf5_path, train_addrs, train_labels, keep_aspect_ratio=Fal
     train_shape = (len(train_addrs), 1, height, max_width if keep_aspect_ratio else 100)
     hdf5_file = h5py.File(hdf5_path, mode='w')
     hdf5_file.create_dataset("image", train_shape, np.float32)
-    hdf5_file.create_dataset("label", (len(train_addrs), max_text_len), np.int)
+    hdf5_file.create_dataset("label", (len(train_addrs), max_text_len), np.int32)
     hdf5_file["label"][...] = train_labels
     return hdf5_file, train_shape
 

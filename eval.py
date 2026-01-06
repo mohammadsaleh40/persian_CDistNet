@@ -187,7 +187,7 @@ def eval(cfg, args,model_path):
         write_to_file(name_file, name_list)
         res_simple = start_eval_simple(pred_list,gt_list,name_list)
         print("res_simple_acc:{}".format(res_simple))
-        result_line += res_simple
+        result_line.append(res_simple)  # Use append instead of += since res_simple is a float
         # if cfg.test.is_test_gt == False:
         #     res = start_eval(cfg.test.script_path, data_name, gt_file, pred_file, name_file, lexdir, cfg.test.python_path)
         #     result_line += res
