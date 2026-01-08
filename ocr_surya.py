@@ -1,51 +1,62 @@
 # %%
-import os
+import cv2
 from PIL import Image
-from surya.foundation import FoundationPredictor
-from surya.recognition import RecognitionPredictor
-from surya.detection import DetectionPredictor
+import numpy as np
+
+def preprocess_image_for_ocr(image_path, upscale=2, apply_threshold=True):
+    """
+    پیش‌پردازش تصویر برای OCR:
+    - تبدیل به grayscale
+    - upscale (بزرگ‌نمایی)
+    - threshold اختیاری (برای Tesseract مفید)
+    """
+    # خواندن تصویر
+    img = cv2.imread(image_path)
+    
+    # تبدیل به grayscale
+    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    
+    # upscale با bicubic
+    gray = cv2.resize(gray, None, fx=upscale, fy=upscale, interpolation=cv2.INTER_CUBIC)
+    
+    # threshold برای Tesseract
+    if apply_threshold:
+        _, gray = cv2.threshold(gray, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
+    
+    # تبدیل به PIL Image برای Surya
+    pil_img = Image.fromarray(gray)
+    
+    return gray, pil_img  # gray برای Tesseract, pil_img برای Surya
+
+# %%
+
+from PIL import Image
 
 
 
 
 image_path = "dataset/eval_img/0010_زمینی.jpg"
 
-# %%
-def upscale_image(
-    img: Image.Image,
-    min_width: int = 512,
-    min_height: int = 64,
-):
-    w, h = img.size
+gray, pil_img = preprocess_image_for_ocr(image_path)
 
-    scale_w = min_width / w
-    scale_h = min_height / h
-    scale = max(scale_w, scale_h, 1.0)  # فقط بزرگ کن، کوچیک نکن
+import pytesseract
+config = "--psm 8 --oem 3"
+text = pytesseract.image_to_string(gray, lang="fas", config=config)
+print("Tesseract:", text)
 
-    new_w = int(w * scale)
-    new_h = int(h * scale)
+from surya.foundation import FoundationPredictor
+from surya.recognition import RecognitionPredictor
+from surya.detection import DetectionPredictor
 
-    return img.resize((new_w, new_h), Image.BICUBIC)
+foundation = FoundationPredictor()
+recognition = RecognitionPredictor(foundation)
+detection = DetectionPredictor()
 
-# %%
+results = recognition([pil_img], det_predictor=detection)
+if results and results[0].text_lines:
+    surya_text = results[0].text_lines[0].text
+else:
+    surya_text = ""
 
-foundation_predictor = FoundationPredictor()
-recognition_predictor = RecognitionPredictor(foundation_predictor)
-detection_predictor = DetectionPredictor()
+print("Surya:", surya_text)
 
-# %%
-image = Image.open(image_path).convert("RGB")
-image = upscale_image(image)
-
-# %%
-page_predictions = recognition_predictor(
-    [image],
-    det_predictor=detection_predictor
-)
-# %%
-print(page_predictions)
-
-# %%
-print(page_predictions[0].text_lines[0].text
-)
-# %%
