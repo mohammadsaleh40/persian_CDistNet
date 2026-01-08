@@ -137,9 +137,10 @@ def main():
         sys.exit(1)
     
     # Define paths
+
     model_path = "/home/homeai/Documents/GitHub/CDistNet/models/number_word_6_font_persian_cdistnet_128_36/epoch2_best_acc.pth"
     config_path = "/home/homeai/Documents/GitHub/CDistNet/configs/CDistNet_config5.py"
-    
+
     print(f"Model path: {image_paths}")
     print(f"Config path: {config_path}")
     
