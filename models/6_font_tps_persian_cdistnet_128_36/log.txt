@@ -1,0 +1,995 @@
+2026-01-07 00:25:21,980 - CDistNet - INFO - model parameter:-------
+Trainable: 65.499528 M
+2026-01-07 00:25:21,981 - CDistNet - INFO - model struct:-------
+DataParallel(
+  (module): CDistNet(
+    (visual_branch): VIS_Pre(
+      (transform): TPS_SpatialTransformerNetwork(
+        (LocalizationNetwork): LocalizationNetwork(
+          (conv): Sequential(
+            (0): Conv2d(1, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+            (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (2): ReLU(inplace=True)
+            (3): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+            (4): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+            (5): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (6): ReLU(inplace=True)
+            (7): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+            (8): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+            (9): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (10): ReLU(inplace=True)
+            (11): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+            (12): Conv2d(256, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+            (13): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (14): ReLU(inplace=True)
+            (15): AdaptiveAvgPool2d(output_size=1)
+          )
+          (localization_fc1): Sequential(
+            (0): Linear(in_features=512, out_features=256, bias=True)
+            (1): ReLU(inplace=True)
+          )
+          (localization_fc2): Linear(in_features=256, out_features=40, bias=True)
+        )
+        (GridGenerator): GridGenerator()
+      )
+      (backbone): ABI_ResNet(
+        (conv1): Conv2d(1, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        (bn1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+        (convbnrelu): ConvBnRelu(
+          (conv): Conv2d(512, 512, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+          (bn): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu): ReLU(inplace=True)
+        )
+        (layer1): Sequential(
+          (0): BasicBlock(
+            (conv1): Conv2d(32, 32, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (bn1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (relu): ReLU(inplace=True)
+            (conv2): Conv2d(32, 32, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+            (bn2): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (downsample): Sequential(
+              (0): Conv2d(32, 32, kernel_size=(1, 1), stride=(2, 2), bias=False)
+              (1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            )
+          )
+          (1): BasicBlock(
+            (conv1): Conv2d(32, 32, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (bn1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (relu): ReLU(inplace=True)
+            (conv2): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+            (bn2): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          )
+          (2): BasicBlock(
+            (conv1): Conv2d(32, 32, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (bn1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (relu): ReLU(inplace=True)
+            (conv2): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+            (bn2): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (layer2): Sequential(
+          (0): BasicBlock(
+            (conv1): Conv2d(32, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (relu): ReLU(inplace=True)
+            (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+            (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (downsample): Sequential(
+              (0): Conv2d(32, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+              (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            )
+          )
+          (1): BasicBlock(
+            (conv1): Conv2d(64, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (relu): ReLU(inplace=True)
+            (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+            (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          )
+          (2): BasicBlock(
+            (conv1): Conv2d(64, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (relu): ReLU(inplace=True)
+            (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+            (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          )
+          (3): BasicBlock(
+            (conv1): Conv2d(64, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (relu): ReLU(inplace=True)
+            (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+            (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (layer3): Sequential(
+          (0): BasicBlock(
+            (conv1): Conv2d(64, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (relu): ReLU(inplace=True)
+            (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+            (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (downsample): Sequential(
+              (0): Conv2d(64, 128, kernel_size=(1, 1), stride=(2, 2), bias=False)
+              (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            )
+          )
+          (1): BasicBlock(
+            (conv1): Conv2d(128, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (relu): ReLU(inplace=True)
+            (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+            (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          )
+          (2): BasicBlock(
+            (conv1): Conv2d(128, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (relu): ReLU(inplace=True)
+            (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+            (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          )
+          (3): BasicBlock(
+            (conv1): Conv2d(128, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (relu): ReLU(inplace=True)
+            (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+            (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          )
+          (4): BasicBlock(
+            (conv1): Conv2d(128, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (relu): ReLU(inplace=True)
+            (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+            (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          )
+          (5): BasicBlock(
+            (conv1): Conv2d(128, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (relu): ReLU(inplace=True)
+            (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+            (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (layer4): Sequential(
+          (0): BasicBlock(
+            (conv1): Conv2d(128, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (relu): ReLU(inplace=True)
+            (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+            (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (downsample): Sequential(
+              (0): Conv2d(128, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+              (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            )
+          )
+          (1): BasicBlock(
+            (conv1): Conv2d(256, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (relu): ReLU(inplace=True)
+            (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+            (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          )
+          (2): BasicBlock(
+            (conv1): Conv2d(256, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (relu): ReLU(inplace=True)
+            (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+            (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          )
+          (3): BasicBlock(
+            (conv1): Conv2d(256, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (relu): ReLU(inplace=True)
+            (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+            (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          )
+          (4): BasicBlock(
+            (conv1): Conv2d(256, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (relu): ReLU(inplace=True)
+            (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+            (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          )
+          (5): BasicBlock(
+            (conv1): Conv2d(256, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (relu): ReLU(inplace=True)
+            (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+            (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+        (layer5): Sequential(
+          (0): BasicBlock(
+            (conv1): Conv2d(256, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (relu): ReLU(inplace=True)
+            (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+            (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (downsample): Sequential(
+              (0): Conv2d(256, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+              (1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            )
+          )
+          (1): BasicBlock(
+            (conv1): Conv2d(512, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (relu): ReLU(inplace=True)
+            (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+            (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          )
+          (2): BasicBlock(
+            (conv1): Conv2d(512, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+            (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+            (relu): ReLU(inplace=True)
+            (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+            (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          )
+        )
+      )
+      (positional_encoding): PositionalEncoding(
+        (dropout): Dropout(p=0.15, inplace=False)
+      )
+      (trans_encoder): TransformerEncoder(
+        (layers): ModuleList(
+          (0-2): 3 x TransformerEncoderLayer(
+            (self_attn): MultiheadAttention(
+              (out_proj): Linear(in_features=512, out_features=512, bias=True)
+              (conv1): Conv2d(512, 512, kernel_size=(1, 1), stride=(1, 1))
+              (conv2): Conv2d(512, 1024, kernel_size=(1, 1), stride=(1, 1))
+              (conv3): Conv2d(512, 1536, kernel_size=(1, 1), stride=(1, 1))
+            )
+            (conv1): Conv2d(512, 2048, kernel_size=(1, 1), stride=(1, 1))
+            (conv2): Conv2d(2048, 512, kernel_size=(1, 1), stride=(1, 1))
+            (norm1): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+            (norm2): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+            (dropout1): Dropout(p=0.15, inplace=False)
+            (dropout2): Dropout(p=0.15, inplace=False)
+          )
+        )
+        (pos_encoding): PositionalEncoding(
+          (dropout): Dropout(p=0.0, inplace=False)
+        )
+      )
+    )
+    (semantic_branch): SEM_Pre(
+      (embedding): Embeddings(
+        (embedding): Embedding(81, 512, padding_idx=0)
+      )
+      (positional_encoding): PositionalEncoding(
+        (dropout): Dropout(p=0.15, inplace=False)
+      )
+    )
+    (positional_branch): POS_Pre(
+      (pos_encoding): PositionalEncoding(
+        (dropout): Dropout(p=0.15, inplace=False)
+      )
+      (linear1): Linear(in_features=512, out_features=512, bias=True)
+      (linear2): Linear(in_features=512, out_features=512, bias=True)
+      (norm2): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+    )
+    (mdcdp): MDCDP(
+      (layers_pos): ModuleList(
+        (0-2): 3 x CommonAttentionLayer(
+          (multihead_attn): MultiheadAttention(
+            (out_proj): Linear(in_features=512, out_features=512, bias=True)
+            (conv1): Conv2d(512, 512, kernel_size=(1, 1), stride=(1, 1))
+            (conv2): Conv2d(512, 1024, kernel_size=(1, 1), stride=(1, 1))
+            (conv3): Conv2d(512, 1536, kernel_size=(1, 1), stride=(1, 1))
+          )
+          (linear1): Linear(in_features=512, out_features=1024, bias=True)
+          (dropout): Dropout(p=0.05, inplace=False)
+          (linear2): Linear(in_features=1024, out_features=512, bias=True)
+          (norm2): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+          (norm3): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+          (dropout2): Dropout(p=0.15, inplace=False)
+          (dropout3): Dropout(p=0.15, inplace=False)
+        )
+      )
+      (layers2): ModuleList(
+        (0-2): 3 x CommonAttentionLayer(
+          (multihead_attn): MultiheadAttention(
+            (out_proj): Linear(in_features=512, out_features=512, bias=True)
+            (conv1): Conv2d(512, 512, kernel_size=(1, 1), stride=(1, 1))
+            (conv2): Conv2d(512, 1024, kernel_size=(1, 1), stride=(1, 1))
+            (conv3): Conv2d(512, 1536, kernel_size=(1, 1), stride=(1, 1))
+          )
+          (linear1): Linear(in_features=512, out_features=1024, bias=True)
+          (dropout): Dropout(p=0.05, inplace=False)
+          (linear2): Linear(in_features=1024, out_features=512, bias=True)
+          (norm2): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+          (norm3): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+          (dropout2): Dropout(p=0.15, inplace=False)
+          (dropout3): Dropout(p=0.15, inplace=False)
+        )
+      )
+      (layers3): ModuleList(
+        (0-2): 3 x CommonAttentionLayer(
+          (multihead_attn): MultiheadAttention(
+            (out_proj): Linear(in_features=512, out_features=512, bias=True)
+            (conv1): Conv2d(512, 512, kernel_size=(1, 1), stride=(1, 1))
+            (conv2): Conv2d(512, 1024, kernel_size=(1, 1), stride=(1, 1))
+            (conv3): Conv2d(512, 1536, kernel_size=(1, 1), stride=(1, 1))
+          )
+          (linear1): Linear(in_features=512, out_features=1024, bias=True)
+          (dropout): Dropout(p=0.05, inplace=False)
+          (linear2): Linear(in_features=1024, out_features=512, bias=True)
+          (norm2): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+          (norm3): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+          (dropout2): Dropout(p=0.15, inplace=False)
+          (dropout3): Dropout(p=0.15, inplace=False)
+        )
+      )
+      (dynamic_shared_fusion): DSF(
+        (w_att): Linear(in_features=1024, out_features=512, bias=True)
+      )
+    )
+    (tgt_word_prj): Linear(in_features=512, out_features=81, bias=False)
+  )
+)
+2026-01-07 00:25:23,783 - CDistNet - INFO - epoch: 0  iter: 0/26258  loss:  4.645850  lr:  0.000000  eta: 13:07:44
+2026-01-07 00:25:23,993 - CDistNet - INFO - eval_loss:4.6488,eval_acc:0.0133--------
+
+2026-01-07 00:25:23,994 - CDistNet - INFO - Saving model: best_acc in epoch:0,iteration:0
+2026-01-07 00:25:24,350 - CDistNet - INFO - Saved!
+2026-01-07 00:27:07,711 - CDistNet - INFO - epoch: 0  iter: 100/26258  loss:  4.124311  lr:  0.000001  eta: 7:36:22
+2026-01-07 00:28:50,960 - CDistNet - INFO - epoch: 0  iter: 200/26258  loss:  3.591153  lr:  0.000001  eta: 7:31:32
+2026-01-07 00:30:34,371 - CDistNet - INFO - epoch: 0  iter: 300/26258  loss:  3.396667  lr:  0.000002  eta: 7:29:00
+2026-01-07 00:32:17,641 - CDistNet - INFO - epoch: 0  iter: 400/26258  loss:  3.308764  lr:  0.000002  eta: 7:26:43
+2026-01-07 00:34:01,240 - CDistNet - INFO - epoch: 0  iter: 500/26258  loss:  3.295415  lr:  0.000003  eta: 7:24:56
+2026-01-07 00:35:44,400 - CDistNet - INFO - epoch: 0  iter: 600/26258  loss:  3.241795  lr:  0.000003  eta: 7:22:52
+2026-01-07 00:37:27,626 - CDistNet - INFO - epoch: 0  iter: 700/26258  loss:  3.237519  lr:  0.000004  eta: 7:20:56
+2026-01-07 00:39:10,810 - CDistNet - INFO - epoch: 0  iter: 800/26258  loss:  3.193051  lr:  0.000004  eta: 7:19:02
+2026-01-07 00:40:53,864 - CDistNet - INFO - epoch: 0  iter: 900/26258  loss:  3.191830  lr:  0.000005  eta: 7:17:07
+2026-01-07 00:42:38,547 - CDistNet - INFO - epoch: 0  iter: 1000/26258  loss:  3.159600  lr:  0.000006  eta: 7:15:55
+2026-01-07 00:44:22,325 - CDistNet - INFO - epoch: 0  iter: 1100/26258  loss:  3.167936  lr:  0.000006  eta: 7:14:16
+2026-01-07 00:46:05,816 - CDistNet - INFO - epoch: 0  iter: 1200/26258  loss:  3.125632  lr:  0.000007  eta: 7:12:31
+2026-01-07 00:47:49,271 - CDistNet - INFO - epoch: 0  iter: 1300/26258  loss:  3.128060  lr:  0.000007  eta: 7:10:45
+2026-01-07 00:49:32,697 - CDistNet - INFO - epoch: 0  iter: 1400/26258  loss:  3.096913  lr:  0.000008  eta: 7:09:00
+2026-01-07 00:51:16,181 - CDistNet - INFO - epoch: 0  iter: 1500/26258  loss:  3.083354  lr:  0.000008  eta: 7:07:15
+2026-01-07 00:52:59,291 - CDistNet - INFO - epoch: 0  iter: 1600/26258  loss:  3.032494  lr:  0.000009  eta: 7:05:25
+2026-01-07 00:54:43,025 - CDistNet - INFO - epoch: 0  iter: 1700/26258  loss:  3.049552  lr:  0.000009  eta: 7:03:44
+2026-01-07 00:56:26,144 - CDistNet - INFO - epoch: 0  iter: 1800/26258  loss:  3.075271  lr:  0.000010  eta: 7:01:55
+2026-01-07 00:58:08,960 - CDistNet - INFO - epoch: 0  iter: 1900/26258  loss:  3.057964  lr:  0.000011  eta: 7:00:03
+2026-01-07 00:59:52,002 - CDistNet - INFO - epoch: 0  iter: 2000/26258  loss:  3.031912  lr:  0.000011  eta: 6:58:14
+2026-01-07 01:01:35,017 - CDistNet - INFO - epoch: 0  iter: 2100/26258  loss:  3.010991  lr:  0.000012  eta: 6:56:26
+2026-01-07 01:03:17,854 - CDistNet - INFO - epoch: 0  iter: 2200/26258  loss:  2.930601  lr:  0.000012  eta: 6:54:36
+2026-01-07 01:05:00,914 - CDistNet - INFO - epoch: 0  iter: 2300/26258  loss:  2.964203  lr:  0.000013  eta: 6:52:49
+2026-01-07 01:06:43,639 - CDistNet - INFO - epoch: 0  iter: 2400/26258  loss:  2.888328  lr:  0.000013  eta: 6:50:59
+2026-01-07 01:08:26,684 - CDistNet - INFO - epoch: 0  iter: 2500/26258  loss:  2.937388  lr:  0.000014  eta: 6:49:13
+2026-01-07 01:10:09,427 - CDistNet - INFO - epoch: 0  iter: 2600/26258  loss:  2.859703  lr:  0.000014  eta: 6:47:24
+2026-01-07 01:11:52,275 - CDistNet - INFO - epoch: 0  iter: 2700/26258  loss:  2.860390  lr:  0.000015  eta: 6:45:36
+2026-01-07 01:13:34,841 - CDistNet - INFO - epoch: 0  iter: 2800/26258  loss:  2.798721  lr:  0.000015  eta: 6:43:47
+2026-01-07 01:15:17,974 - CDistNet - INFO - epoch: 0  iter: 2900/26258  loss:  2.794712  lr:  0.000016  eta: 6:42:02
+2026-01-07 01:17:00,897 - CDistNet - INFO - epoch: 0  iter: 3000/26258  loss:  2.709951  lr:  0.000017  eta: 6:40:16
+2026-01-07 01:18:43,804 - CDistNet - INFO - epoch: 0  iter: 3100/26258  loss:  2.743587  lr:  0.000017  eta: 6:38:30
+2026-01-07 01:20:26,682 - CDistNet - INFO - epoch: 0  iter: 3200/26258  loss:  2.677989  lr:  0.000018  eta: 6:36:44
+2026-01-07 01:22:09,409 - CDistNet - INFO - epoch: 0  iter: 3300/26258  loss:  2.628507  lr:  0.000018  eta: 6:34:58
+2026-01-07 01:23:52,111 - CDistNet - INFO - epoch: 0  iter: 3400/26258  loss:  2.561064  lr:  0.000019  eta: 6:33:11
+2026-01-07 01:25:34,825 - CDistNet - INFO - epoch: 0  iter: 3500/26258  loss:  2.368663  lr:  0.000019  eta: 6:31:25
+2026-01-07 01:27:17,404 - CDistNet - INFO - epoch: 0  iter: 3600/26258  loss:  2.333247  lr:  0.000020  eta: 6:29:37
+2026-01-07 01:29:00,253 - CDistNet - INFO - epoch: 0  iter: 3700/26258  loss:  2.194652  lr:  0.000020  eta: 6:27:52
+2026-01-07 01:30:43,111 - CDistNet - INFO - epoch: 0  iter: 3800/26258  loss:  2.126493  lr:  0.000021  eta: 6:26:07
+2026-01-07 01:32:25,793 - CDistNet - INFO - epoch: 0  iter: 3900/26258  loss:  2.056660  lr:  0.000022  eta: 6:24:21
+2026-01-07 01:34:08,527 - CDistNet - INFO - epoch: 0  iter: 4000/26258  loss:  1.833678  lr:  0.000022  eta: 6:22:36
+2026-01-07 01:34:08,699 - CDistNet - INFO - eval_loss:3.2283,eval_acc:0.4311--------
+
+2026-01-07 01:34:08,700 - CDistNet - INFO - Saving model: best_acc in epoch:0,iteration:4000
+2026-01-07 01:34:09,010 - CDistNet - INFO - Saved!
+2026-01-07 01:35:51,755 - CDistNet - INFO - epoch: 0  iter: 4100/26258  loss:  1.770227  lr:  0.000023  eta: 6:20:53
+2026-01-07 01:37:34,564 - CDistNet - INFO - epoch: 0  iter: 4200/26258  loss:  1.772763  lr:  0.000023  eta: 6:19:08
+2026-01-07 01:39:17,640 - CDistNet - INFO - epoch: 0  iter: 4300/26258  loss:  1.563235  lr:  0.000024  eta: 6:17:25
+2026-01-07 01:41:00,349 - CDistNet - INFO - epoch: 0  iter: 4400/26258  loss:  1.613630  lr:  0.000024  eta: 6:15:40
+2026-01-07 01:42:43,521 - CDistNet - INFO - epoch: 0  iter: 4500/26258  loss:  1.526459  lr:  0.000025  eta: 6:13:57
+2026-01-07 01:44:26,317 - CDistNet - INFO - epoch: 0  iter: 4600/26258  loss:  1.394207  lr:  0.000025  eta: 6:12:12
+2026-01-07 01:46:09,660 - CDistNet - INFO - epoch: 0  iter: 4700/26258  loss:  1.512360  lr:  0.000026  eta: 6:10:30
+2026-01-07 01:47:52,639 - CDistNet - INFO - epoch: 0  iter: 4800/26258  loss:  1.440434  lr:  0.000027  eta: 6:08:46
+2026-01-07 01:49:35,579 - CDistNet - INFO - epoch: 0  iter: 4900/26258  loss:  1.229823  lr:  0.000027  eta: 6:07:02
+2026-01-07 01:51:18,835 - CDistNet - INFO - epoch: 0  iter: 5000/26258  loss:  1.199586  lr:  0.000028  eta: 6:05:20
+2026-01-07 01:53:01,656 - CDistNet - INFO - epoch: 0  iter: 5100/26258  loss:  1.211826  lr:  0.000028  eta: 6:03:36
+2026-01-07 01:54:44,545 - CDistNet - INFO - epoch: 0  iter: 5200/26258  loss:  1.183801  lr:  0.000029  eta: 6:01:52
+2026-01-07 01:56:27,436 - CDistNet - INFO - epoch: 0  iter: 5300/26258  loss:  1.132571  lr:  0.000029  eta: 6:00:08
+2026-01-07 01:58:10,471 - CDistNet - INFO - epoch: 0  iter: 5400/26258  loss:  1.084940  lr:  0.000030  eta: 5:58:24
+2026-01-07 01:59:53,246 - CDistNet - INFO - epoch: 0  iter: 5500/26258  loss:  1.152700  lr:  0.000030  eta: 5:56:40
+2026-01-07 02:01:35,966 - CDistNet - INFO - epoch: 0  iter: 5600/26258  loss:  1.088712  lr:  0.000031  eta: 5:54:55
+2026-01-07 02:03:19,027 - CDistNet - INFO - epoch: 0  iter: 5700/26258  loss:  1.106176  lr:  0.000031  eta: 5:53:12
+2026-01-07 02:05:01,814 - CDistNet - INFO - epoch: 0  iter: 5800/26258  loss:  1.092976  lr:  0.000032  eta: 5:51:28
+2026-01-07 02:06:44,632 - CDistNet - INFO - epoch: 0  iter: 5900/26258  loss:  1.044753  lr:  0.000033  eta: 5:49:44
+2026-01-07 02:08:27,648 - CDistNet - INFO - epoch: 0  iter: 6000/26258  loss:  0.985545  lr:  0.000033  eta: 5:48:01
+2026-01-07 02:10:10,588 - CDistNet - INFO - epoch: 0  iter: 6100/26258  loss:  1.033728  lr:  0.000034  eta: 5:46:17
+2026-01-07 02:11:53,443 - CDistNet - INFO - epoch: 0  iter: 6200/26258  loss:  0.995023  lr:  0.000034  eta: 5:44:34
+2026-01-07 02:13:36,151 - CDistNet - INFO - epoch: 0  iter: 6300/26258  loss:  0.962301  lr:  0.000035  eta: 5:42:49
+2026-01-07 02:15:18,777 - CDistNet - INFO - epoch: 0  iter: 6400/26258  loss:  0.966479  lr:  0.000035  eta: 5:41:05
+2026-01-07 02:17:01,374 - CDistNet - INFO - epoch: 0  iter: 6500/26258  loss:  0.968868  lr:  0.000036  eta: 5:39:20
+2026-01-07 02:18:44,245 - CDistNet - INFO - epoch: 0  iter: 6600/26258  loss:  0.950041  lr:  0.000036  eta: 5:37:37
+2026-01-07 02:20:27,184 - CDistNet - INFO - epoch: 0  iter: 6700/26258  loss:  0.909604  lr:  0.000037  eta: 5:35:53
+2026-01-07 02:22:09,760 - CDistNet - INFO - epoch: 0  iter: 6800/26258  loss:  0.953605  lr:  0.000038  eta: 5:34:09
+2026-01-07 02:23:52,592 - CDistNet - INFO - epoch: 0  iter: 6900/26258  loss:  0.933800  lr:  0.000038  eta: 5:32:25
+2026-01-07 02:25:35,679 - CDistNet - INFO - epoch: 0  iter: 7000/26258  loss:  0.947538  lr:  0.000039  eta: 5:30:43
+2026-01-07 02:27:18,704 - CDistNet - INFO - epoch: 0  iter: 7100/26258  loss:  0.908049  lr:  0.000039  eta: 5:28:59
+2026-01-07 02:29:01,575 - CDistNet - INFO - epoch: 0  iter: 7200/26258  loss:  0.884689  lr:  0.000040  eta: 5:27:16
+2026-01-07 02:30:44,327 - CDistNet - INFO - epoch: 0  iter: 7300/26258  loss:  0.894583  lr:  0.000040  eta: 5:25:32
+2026-01-07 02:32:26,913 - CDistNet - INFO - epoch: 0  iter: 7400/26258  loss:  0.917612  lr:  0.000041  eta: 5:23:48
+2026-01-07 02:34:10,075 - CDistNet - INFO - epoch: 0  iter: 7500/26258  loss:  0.886329  lr:  0.000041  eta: 5:22:05
+2026-01-07 02:35:52,749 - CDistNet - INFO - epoch: 0  iter: 7600/26258  loss:  0.857325  lr:  0.000042  eta: 5:20:21
+2026-01-07 02:37:35,694 - CDistNet - INFO - epoch: 0  iter: 7700/26258  loss:  0.932851  lr:  0.000043  eta: 5:18:38
+2026-01-07 02:39:18,490 - CDistNet - INFO - epoch: 0  iter: 7800/26258  loss:  0.864539  lr:  0.000043  eta: 5:16:55
+2026-01-07 02:41:01,103 - CDistNet - INFO - epoch: 0  iter: 7900/26258  loss:  0.905310  lr:  0.000044  eta: 5:15:11
+2026-01-07 02:42:44,118 - CDistNet - INFO - epoch: 0  iter: 8000/26258  loss:  0.856000  lr:  0.000044  eta: 5:13:28
+2026-01-07 02:42:44,283 - CDistNet - INFO - eval_loss:1.9677,eval_acc:0.7711--------
+
+2026-01-07 02:42:44,283 - CDistNet - INFO - Saving model: best_acc in epoch:0,iteration:8000
+2026-01-07 02:42:44,603 - CDistNet - INFO - Saved!
+2026-01-07 02:44:27,527 - CDistNet - INFO - epoch: 0  iter: 8100/26258  loss:  0.896527  lr:  0.000045  eta: 5:11:46
+2026-01-07 02:46:10,067 - CDistNet - INFO - epoch: 0  iter: 8200/26258  loss:  0.868960  lr:  0.000045  eta: 5:10:02
+2026-01-07 02:47:52,804 - CDistNet - INFO - epoch: 0  iter: 8300/26258  loss:  0.888808  lr:  0.000046  eta: 5:08:18
+2026-01-07 02:49:35,590 - CDistNet - INFO - epoch: 0  iter: 8400/26258  loss:  0.882775  lr:  0.000046  eta: 5:06:34
+2026-01-07 02:51:18,328 - CDistNet - INFO - epoch: 0  iter: 8500/26258  loss:  0.873061  lr:  0.000047  eta: 5:04:51
+2026-01-07 02:53:01,309 - CDistNet - INFO - epoch: 0  iter: 8600/26258  loss:  0.883410  lr:  0.000048  eta: 5:03:08
+2026-01-07 02:54:44,184 - CDistNet - INFO - epoch: 0  iter: 8700/26258  loss:  0.844059  lr:  0.000048  eta: 5:01:25
+2026-01-07 02:56:26,812 - CDistNet - INFO - epoch: 0  iter: 8800/26258  loss:  0.852356  lr:  0.000049  eta: 4:59:41
+2026-01-07 02:58:09,415 - CDistNet - INFO - epoch: 0  iter: 8900/26258  loss:  0.827027  lr:  0.000049  eta: 4:57:57
+2026-01-07 02:59:52,061 - CDistNet - INFO - epoch: 0  iter: 9000/26258  loss:  0.858403  lr:  0.000050  eta: 4:56:13
+2026-01-07 03:01:34,852 - CDistNet - INFO - epoch: 0  iter: 9100/26258  loss:  0.837551  lr:  0.000050  eta: 4:54:30
+2026-01-07 03:03:17,620 - CDistNet - INFO - epoch: 0  iter: 9200/26258  loss:  0.846879  lr:  0.000051  eta: 4:52:47
+2026-01-07 03:05:00,070 - CDistNet - INFO - epoch: 0  iter: 9300/26258  loss:  0.898341  lr:  0.000051  eta: 4:51:03
+2026-01-07 03:06:42,972 - CDistNet - INFO - epoch: 0  iter: 9400/26258  loss:  0.815376  lr:  0.000052  eta: 4:49:20
+2026-01-07 03:08:25,399 - CDistNet - INFO - epoch: 0  iter: 9500/26258  loss:  0.819446  lr:  0.000052  eta: 4:47:36
+2026-01-07 03:10:08,102 - CDistNet - INFO - epoch: 0  iter: 9600/26258  loss:  0.844889  lr:  0.000053  eta: 4:45:52
+2026-01-07 03:11:50,749 - CDistNet - INFO - epoch: 0  iter: 9700/26258  loss:  0.822539  lr:  0.000054  eta: 4:44:09
+2026-01-07 03:13:33,518 - CDistNet - INFO - epoch: 0  iter: 9800/26258  loss:  0.840707  lr:  0.000054  eta: 4:42:25
+2026-01-07 03:15:16,192 - CDistNet - INFO - epoch: 0  iter: 9900/26258  loss:  0.821170  lr:  0.000055  eta: 4:40:42
+2026-01-07 03:16:58,677 - CDistNet - INFO - epoch: 0  iter: 10000/26258  loss:  0.867634  lr:  0.000055  eta: 4:38:58
+2026-01-07 03:18:41,311 - CDistNet - INFO - epoch: 0  iter: 10100/26258  loss:  0.832059  lr:  0.000056  eta: 4:37:15
+2026-01-07 03:20:23,703 - CDistNet - INFO - epoch: 0  iter: 10200/26258  loss:  0.827573  lr:  0.000056  eta: 4:35:31
+2026-01-07 03:22:06,730 - CDistNet - INFO - epoch: 0  iter: 10300/26258  loss:  0.841466  lr:  0.000057  eta: 4:33:48
+2026-01-07 03:23:49,321 - CDistNet - INFO - epoch: 0  iter: 10400/26258  loss:  0.832087  lr:  0.000057  eta: 4:32:05
+2026-01-07 03:25:32,159 - CDistNet - INFO - epoch: 0  iter: 10500/26258  loss:  0.824467  lr:  0.000058  eta: 4:30:21
+2026-01-07 03:27:14,788 - CDistNet - INFO - epoch: 0  iter: 10600/26258  loss:  0.844824  lr:  0.000059  eta: 4:28:38
+2026-01-07 03:28:57,355 - CDistNet - INFO - epoch: 0  iter: 10700/26258  loss:  0.825662  lr:  0.000059  eta: 4:26:55
+2026-01-07 03:30:39,785 - CDistNet - INFO - epoch: 0  iter: 10800/26258  loss:  0.803127  lr:  0.000060  eta: 4:25:11
+2026-01-07 03:32:22,526 - CDistNet - INFO - epoch: 0  iter: 10900/26258  loss:  0.840303  lr:  0.000060  eta: 4:23:28
+2026-01-07 03:34:05,105 - CDistNet - INFO - epoch: 0  iter: 11000/26258  loss:  0.808112  lr:  0.000061  eta: 4:21:44
+2026-01-07 03:35:47,925 - CDistNet - INFO - epoch: 0  iter: 11100/26258  loss:  0.840850  lr:  0.000061  eta: 4:20:01
+2026-01-07 03:37:30,676 - CDistNet - INFO - epoch: 0  iter: 11200/26258  loss:  0.831505  lr:  0.000062  eta: 4:18:18
+2026-01-07 03:39:13,355 - CDistNet - INFO - epoch: 0  iter: 11300/26258  loss:  0.860699  lr:  0.000062  eta: 4:16:35
+2026-01-07 03:40:56,228 - CDistNet - INFO - epoch: 0  iter: 11400/26258  loss:  0.850994  lr:  0.000063  eta: 4:14:52
+2026-01-07 03:42:39,310 - CDistNet - INFO - epoch: 0  iter: 11500/26258  loss:  0.817407  lr:  0.000064  eta: 4:13:09
+2026-01-07 03:44:21,950 - CDistNet - INFO - epoch: 0  iter: 11600/26258  loss:  0.814230  lr:  0.000064  eta: 4:11:26
+2026-01-07 03:46:04,447 - CDistNet - INFO - epoch: 0  iter: 11700/26258  loss:  0.832314  lr:  0.000065  eta: 4:09:42
+2026-01-07 03:47:47,286 - CDistNet - INFO - epoch: 0  iter: 11800/26258  loss:  0.813957  lr:  0.000065  eta: 4:07:59
+2026-01-07 03:49:30,038 - CDistNet - INFO - epoch: 0  iter: 11900/26258  loss:  0.835775  lr:  0.000066  eta: 4:06:16
+2026-01-07 03:51:12,652 - CDistNet - INFO - epoch: 0  iter: 12000/26258  loss:  0.820517  lr:  0.000066  eta: 4:04:33
+2026-01-07 03:51:12,816 - CDistNet - INFO - eval_loss:1.8525,eval_acc:0.7889--------
+
+2026-01-07 03:51:12,817 - CDistNet - INFO - Saving model: best_acc in epoch:0,iteration:12000
+2026-01-07 03:51:13,140 - CDistNet - INFO - Saved!
+2026-01-07 03:52:55,589 - CDistNet - INFO - epoch: 0  iter: 12100/26258  loss:  0.853323  lr:  0.000067  eta: 4:02:50
+2026-01-07 03:54:38,019 - CDistNet - INFO - epoch: 0  iter: 12200/26258  loss:  0.819814  lr:  0.000067  eta: 4:01:07
+2026-01-07 03:56:20,939 - CDistNet - INFO - epoch: 0  iter: 12300/26258  loss:  0.798560  lr:  0.000068  eta: 3:59:24
+2026-01-07 03:58:03,386 - CDistNet - INFO - epoch: 0  iter: 12400/26258  loss:  0.803507  lr:  0.000069  eta: 3:57:40
+2026-01-07 03:59:46,209 - CDistNet - INFO - epoch: 0  iter: 12500/26258  loss:  0.871258  lr:  0.000069  eta: 3:55:57
+2026-01-07 04:01:28,853 - CDistNet - INFO - epoch: 0  iter: 12600/26258  loss:  0.809972  lr:  0.000070  eta: 3:54:14
+2026-01-07 04:03:11,750 - CDistNet - INFO - epoch: 0  iter: 12700/26258  loss:  0.825052  lr:  0.000070  eta: 3:52:31
+2026-01-07 04:04:54,656 - CDistNet - INFO - epoch: 0  iter: 12800/26258  loss:  0.866970  lr:  0.000071  eta: 3:50:48
+2026-01-07 04:06:37,051 - CDistNet - INFO - epoch: 0  iter: 12900/26258  loss:  0.854395  lr:  0.000071  eta: 3:49:05
+2026-01-07 04:08:19,653 - CDistNet - INFO - epoch: 0  iter: 13000/26258  loss:  0.831012  lr:  0.000072  eta: 3:47:22
+2026-01-07 04:10:02,419 - CDistNet - INFO - epoch: 0  iter: 13100/26258  loss:  0.856778  lr:  0.000072  eta: 3:45:39
+2026-01-07 04:11:44,980 - CDistNet - INFO - epoch: 0  iter: 13200/26258  loss:  0.817772  lr:  0.000073  eta: 3:43:55
+2026-01-07 04:13:27,804 - CDistNet - INFO - epoch: 0  iter: 13300/26258  loss:  0.853016  lr:  0.000073  eta: 3:42:12
+2026-01-07 04:15:10,732 - CDistNet - INFO - epoch: 0  iter: 13400/26258  loss:  0.822216  lr:  0.000074  eta: 3:40:30
+2026-01-07 04:16:53,350 - CDistNet - INFO - epoch: 0  iter: 13500/26258  loss:  0.883337  lr:  0.000075  eta: 3:38:46
+2026-01-07 04:18:35,885 - CDistNet - INFO - epoch: 0  iter: 13600/26258  loss:  0.823239  lr:  0.000075  eta: 3:37:03
+2026-01-07 04:20:18,540 - CDistNet - INFO - epoch: 0  iter: 13700/26258  loss:  0.835441  lr:  0.000076  eta: 3:35:20
+2026-01-07 04:22:01,238 - CDistNet - INFO - epoch: 0  iter: 13800/26258  loss:  0.832641  lr:  0.000076  eta: 3:33:37
+2026-01-07 04:23:43,671 - CDistNet - INFO - epoch: 0  iter: 13900/26258  loss:  0.836780  lr:  0.000077  eta: 3:31:54
+2026-01-07 04:25:26,297 - CDistNet - INFO - epoch: 0  iter: 14000/26258  loss:  0.832440  lr:  0.000077  eta: 3:30:11
+2026-01-07 04:27:08,861 - CDistNet - INFO - epoch: 0  iter: 14100/26258  loss:  0.844017  lr:  0.000078  eta: 3:28:27
+2026-01-07 04:28:51,296 - CDistNet - INFO - epoch: 0  iter: 14200/26258  loss:  0.821970  lr:  0.000078  eta: 3:26:44
+2026-01-07 04:30:33,898 - CDistNet - INFO - epoch: 0  iter: 14300/26258  loss:  0.817232  lr:  0.000079  eta: 3:25:01
+2026-01-07 04:32:16,504 - CDistNet - INFO - epoch: 0  iter: 14400/26258  loss:  0.890869  lr:  0.000080  eta: 3:23:18
+2026-01-07 04:33:59,172 - CDistNet - INFO - epoch: 0  iter: 14500/26258  loss:  0.825537  lr:  0.000080  eta: 3:21:35
+2026-01-07 04:35:41,968 - CDistNet - INFO - epoch: 0  iter: 14600/26258  loss:  0.827334  lr:  0.000081  eta: 3:19:52
+2026-01-07 04:37:24,956 - CDistNet - INFO - epoch: 0  iter: 14700/26258  loss:  0.816535  lr:  0.000081  eta: 3:18:09
+2026-01-07 04:39:07,488 - CDistNet - INFO - epoch: 0  iter: 14800/26258  loss:  0.847084  lr:  0.000082  eta: 3:16:26
+2026-01-07 04:40:49,892 - CDistNet - INFO - epoch: 0  iter: 14900/26258  loss:  0.853481  lr:  0.000082  eta: 3:14:43
+2026-01-07 04:42:32,684 - CDistNet - INFO - epoch: 0  iter: 15000/26258  loss:  0.817569  lr:  0.000083  eta: 3:13:00
+2026-01-07 04:44:15,529 - CDistNet - INFO - epoch: 0  iter: 15100/26258  loss:  0.811336  lr:  0.000083  eta: 3:11:17
+2026-01-07 04:45:57,909 - CDistNet - INFO - epoch: 0  iter: 15200/26258  loss:  0.858714  lr:  0.000084  eta: 3:09:34
+2026-01-07 04:47:40,737 - CDistNet - INFO - epoch: 0  iter: 15300/26258  loss:  0.836074  lr:  0.000085  eta: 3:07:51
+2026-01-07 04:49:23,441 - CDistNet - INFO - epoch: 0  iter: 15400/26258  loss:  0.818344  lr:  0.000085  eta: 3:06:08
+2026-01-07 04:51:05,871 - CDistNet - INFO - epoch: 0  iter: 15500/26258  loss:  0.807682  lr:  0.000086  eta: 3:04:25
+2026-01-07 04:52:48,586 - CDistNet - INFO - epoch: 0  iter: 15600/26258  loss:  0.818898  lr:  0.000086  eta: 3:02:42
+2026-01-07 04:54:31,274 - CDistNet - INFO - epoch: 0  iter: 15700/26258  loss:  0.843422  lr:  0.000087  eta: 3:00:59
+2026-01-07 04:56:13,656 - CDistNet - INFO - epoch: 0  iter: 15800/26258  loss:  0.822205  lr:  0.000087  eta: 2:59:16
+2026-01-07 04:57:56,119 - CDistNet - INFO - epoch: 0  iter: 15900/26258  loss:  0.808020  lr:  0.000088  eta: 2:57:33
+2026-01-07 04:59:38,689 - CDistNet - INFO - epoch: 0  iter: 16000/26258  loss:  0.843163  lr:  0.000088  eta: 2:55:50
+2026-01-07 04:59:38,852 - CDistNet - INFO - eval_loss:1.7582,eval_acc:0.8133--------
+
+2026-01-07 04:59:38,853 - CDistNet - INFO - Saving model: best_acc in epoch:0,iteration:16000
+2026-01-07 04:59:39,172 - CDistNet - INFO - Saved!
+2026-01-07 05:01:21,609 - CDistNet - INFO - epoch: 0  iter: 16100/26258  loss:  0.838790  lr:  0.000089  eta: 2:54:07
+2026-01-07 05:03:04,015 - CDistNet - INFO - epoch: 0  iter: 16200/26258  loss:  0.835812  lr:  0.000089  eta: 2:52:24
+2026-01-07 05:04:46,557 - CDistNet - INFO - epoch: 0  iter: 16300/26258  loss:  0.836914  lr:  0.000090  eta: 2:50:41
+2026-01-07 05:06:28,672 - CDistNet - INFO - epoch: 0  iter: 16400/26258  loss:  0.812160  lr:  0.000091  eta: 2:48:57
+2026-01-07 05:08:11,033 - CDistNet - INFO - epoch: 0  iter: 16500/26258  loss:  0.830500  lr:  0.000091  eta: 2:47:14
+2026-01-07 05:09:53,318 - CDistNet - INFO - epoch: 0  iter: 16600/26258  loss:  0.824935  lr:  0.000092  eta: 2:45:31
+2026-01-07 05:11:35,937 - CDistNet - INFO - epoch: 0  iter: 16700/26258  loss:  0.813355  lr:  0.000092  eta: 2:43:48
+2026-01-07 05:13:18,521 - CDistNet - INFO - epoch: 0  iter: 16800/26258  loss:  0.811372  lr:  0.000093  eta: 2:42:05
+2026-01-07 05:15:01,009 - CDistNet - INFO - epoch: 0  iter: 16900/26258  loss:  0.814360  lr:  0.000093  eta: 2:40:22
+2026-01-07 05:16:43,493 - CDistNet - INFO - epoch: 0  iter: 17000/26258  loss:  0.819055  lr:  0.000094  eta: 2:38:39
+2026-01-07 05:18:25,881 - CDistNet - INFO - epoch: 0  iter: 17100/26258  loss:  0.802936  lr:  0.000094  eta: 2:36:56
+2026-01-07 05:20:08,445 - CDistNet - INFO - epoch: 0  iter: 17200/26258  loss:  0.830010  lr:  0.000095  eta: 2:35:13
+2026-01-07 05:21:50,893 - CDistNet - INFO - epoch: 0  iter: 17300/26258  loss:  0.816343  lr:  0.000096  eta: 2:33:30
+2026-01-07 05:23:33,274 - CDistNet - INFO - epoch: 0  iter: 17400/26258  loss:  0.833611  lr:  0.000096  eta: 2:31:47
+2026-01-07 05:25:15,562 - CDistNet - INFO - epoch: 0  iter: 17500/26258  loss:  0.798096  lr:  0.000097  eta: 2:30:04
+2026-01-07 05:26:57,913 - CDistNet - INFO - epoch: 0  iter: 17600/26258  loss:  0.818377  lr:  0.000097  eta: 2:28:21
+2026-01-07 05:28:40,287 - CDistNet - INFO - epoch: 0  iter: 17700/26258  loss:  0.806947  lr:  0.000098  eta: 2:26:38
+2026-01-07 05:30:22,804 - CDistNet - INFO - epoch: 0  iter: 17800/26258  loss:  0.817769  lr:  0.000098  eta: 2:24:55
+2026-01-07 05:32:05,336 - CDistNet - INFO - epoch: 0  iter: 17900/26258  loss:  0.808713  lr:  0.000099  eta: 2:23:12
+2026-01-07 05:33:47,936 - CDistNet - INFO - epoch: 0  iter: 18000/26258  loss:  0.795249  lr:  0.000099  eta: 2:21:29
+2026-01-07 05:35:30,484 - CDistNet - INFO - epoch: 0  iter: 18100/26258  loss:  0.825512  lr:  0.000100  eta: 2:19:46
+2026-01-07 05:37:12,940 - CDistNet - INFO - epoch: 0  iter: 18200/26258  loss:  0.814620  lr:  0.000101  eta: 2:18:03
+2026-01-07 05:38:55,167 - CDistNet - INFO - epoch: 0  iter: 18300/26258  loss:  0.812081  lr:  0.000101  eta: 2:16:20
+2026-01-07 05:40:37,599 - CDistNet - INFO - epoch: 0  iter: 18400/26258  loss:  0.807555  lr:  0.000102  eta: 2:14:37
+2026-01-07 05:42:20,244 - CDistNet - INFO - epoch: 0  iter: 18500/26258  loss:  0.826385  lr:  0.000102  eta: 2:12:54
+2026-01-07 05:44:02,598 - CDistNet - INFO - epoch: 0  iter: 18600/26258  loss:  0.818294  lr:  0.000103  eta: 2:11:11
+2026-01-07 05:45:45,352 - CDistNet - INFO - epoch: 0  iter: 18700/26258  loss:  0.804109  lr:  0.000103  eta: 2:09:29
+2026-01-07 05:47:28,002 - CDistNet - INFO - epoch: 0  iter: 18800/26258  loss:  0.824417  lr:  0.000104  eta: 2:07:46
+2026-01-07 05:49:10,747 - CDistNet - INFO - epoch: 0  iter: 18900/26258  loss:  0.815972  lr:  0.000104  eta: 2:06:03
+2026-01-07 05:50:53,384 - CDistNet - INFO - epoch: 0  iter: 19000/26258  loss:  0.834516  lr:  0.000105  eta: 2:04:20
+2026-01-07 05:52:36,033 - CDistNet - INFO - epoch: 0  iter: 19100/26258  loss:  0.904668  lr:  0.000106  eta: 2:02:37
+2026-01-07 05:54:18,491 - CDistNet - INFO - epoch: 0  iter: 19200/26258  loss:  0.818370  lr:  0.000106  eta: 2:00:54
+2026-01-07 05:56:00,689 - CDistNet - INFO - epoch: 0  iter: 19300/26258  loss:  0.822827  lr:  0.000107  eta: 1:59:11
+2026-01-07 05:57:43,192 - CDistNet - INFO - epoch: 0  iter: 19400/26258  loss:  0.840820  lr:  0.000107  eta: 1:57:28
+2026-01-07 05:59:25,648 - CDistNet - INFO - epoch: 0  iter: 19500/26258  loss:  0.829307  lr:  0.000108  eta: 1:55:46
+2026-01-07 06:01:08,004 - CDistNet - INFO - epoch: 0  iter: 19600/26258  loss:  0.815598  lr:  0.000108  eta: 1:54:03
+2026-01-07 06:02:50,719 - CDistNet - INFO - epoch: 0  iter: 19700/26258  loss:  0.802413  lr:  0.000109  eta: 1:52:20
+2026-01-07 06:04:33,412 - CDistNet - INFO - epoch: 0  iter: 19800/26258  loss:  0.807507  lr:  0.000109  eta: 1:50:37
+2026-01-07 06:06:15,627 - CDistNet - INFO - epoch: 0  iter: 19900/26258  loss:  0.800639  lr:  0.000110  eta: 1:48:54
+2026-01-07 06:07:57,967 - CDistNet - INFO - epoch: 0  iter: 20000/26258  loss:  0.804425  lr:  0.000110  eta: 1:47:11
+2026-01-07 06:07:58,133 - CDistNet - INFO - eval_loss:1.9712,eval_acc:0.7933--------
+
+2026-01-07 06:09:40,403 - CDistNet - INFO - epoch: 0  iter: 20100/26258  loss:  0.802305  lr:  0.000111  eta: 1:45:28
+2026-01-07 06:11:22,573 - CDistNet - INFO - epoch: 0  iter: 20200/26258  loss:  0.825112  lr:  0.000112  eta: 1:43:45
+2026-01-07 06:13:04,801 - CDistNet - INFO - epoch: 0  iter: 20300/26258  loss:  0.828098  lr:  0.000112  eta: 1:42:02
+2026-01-07 06:14:47,086 - CDistNet - INFO - epoch: 0  iter: 20400/26258  loss:  0.816507  lr:  0.000113  eta: 1:40:19
+2026-01-07 06:16:29,361 - CDistNet - INFO - epoch: 0  iter: 20500/26258  loss:  0.826536  lr:  0.000113  eta: 1:38:37
+2026-01-07 06:18:11,706 - CDistNet - INFO - epoch: 0  iter: 20600/26258  loss:  0.868258  lr:  0.000114  eta: 1:36:54
+2026-01-07 06:19:54,237 - CDistNet - INFO - epoch: 0  iter: 20700/26258  loss:  0.827598  lr:  0.000114  eta: 1:35:11
+2026-01-07 06:21:36,632 - CDistNet - INFO - epoch: 0  iter: 20800/26258  loss:  0.794939  lr:  0.000115  eta: 1:33:28
+2026-01-07 06:23:18,973 - CDistNet - INFO - epoch: 0  iter: 20900/26258  loss:  0.815339  lr:  0.000115  eta: 1:31:45
+2026-01-07 06:25:01,600 - CDistNet - INFO - epoch: 0  iter: 21000/26258  loss:  0.833031  lr:  0.000116  eta: 1:30:02
+2026-01-07 06:26:44,162 - CDistNet - INFO - epoch: 0  iter: 21100/26258  loss:  0.825410  lr:  0.000117  eta: 1:28:20
+2026-01-07 06:28:26,225 - CDistNet - INFO - epoch: 0  iter: 21200/26258  loss:  0.861533  lr:  0.000117  eta: 1:26:37
+2026-01-07 06:30:08,754 - CDistNet - INFO - epoch: 0  iter: 21300/26258  loss:  0.808678  lr:  0.000118  eta: 1:24:54
+2026-01-07 06:31:51,100 - CDistNet - INFO - epoch: 0  iter: 21400/26258  loss:  0.813500  lr:  0.000118  eta: 1:23:11
+2026-01-07 06:33:33,484 - CDistNet - INFO - epoch: 0  iter: 21500/26258  loss:  0.833693  lr:  0.000119  eta: 1:21:28
+2026-01-07 06:35:15,697 - CDistNet - INFO - epoch: 0  iter: 21600/26258  loss:  0.821855  lr:  0.000119  eta: 1:19:45
+2026-01-07 06:36:58,119 - CDistNet - INFO - epoch: 0  iter: 21700/26258  loss:  0.819532  lr:  0.000120  eta: 1:18:02
+2026-01-07 06:38:40,492 - CDistNet - INFO - epoch: 0  iter: 21800/26258  loss:  0.806596  lr:  0.000120  eta: 1:16:20
+2026-01-07 06:40:23,138 - CDistNet - INFO - epoch: 0  iter: 21900/26258  loss:  0.810866  lr:  0.000121  eta: 1:14:37
+2026-01-07 06:42:05,650 - CDistNet - INFO - epoch: 0  iter: 22000/26258  loss:  0.824816  lr:  0.000122  eta: 1:12:54
+2026-01-07 06:43:47,969 - CDistNet - INFO - epoch: 0  iter: 22100/26258  loss:  0.791421  lr:  0.000122  eta: 1:11:11
+2026-01-07 06:45:30,361 - CDistNet - INFO - epoch: 0  iter: 22200/26258  loss:  0.807865  lr:  0.000123  eta: 1:09:29
+2026-01-07 06:47:12,633 - CDistNet - INFO - epoch: 0  iter: 22300/26258  loss:  0.800535  lr:  0.000123  eta: 1:07:46
+2026-01-07 06:48:55,204 - CDistNet - INFO - epoch: 0  iter: 22400/26258  loss:  0.818026  lr:  0.000124  eta: 1:06:03
+2026-01-07 06:50:37,324 - CDistNet - INFO - epoch: 0  iter: 22500/26258  loss:  0.806450  lr:  0.000124  eta: 1:04:20
+2026-01-07 06:52:19,831 - CDistNet - INFO - epoch: 0  iter: 22600/26258  loss:  0.836719  lr:  0.000125  eta: 1:02:37
+2026-01-07 06:54:02,584 - CDistNet - INFO - epoch: 0  iter: 22700/26258  loss:  0.806235  lr:  0.000125  eta: 1:00:55
+2026-01-07 06:55:45,025 - CDistNet - INFO - epoch: 0  iter: 22800/26258  loss:  0.823337  lr:  0.000126  eta: 0:59:12
+2026-01-07 06:57:27,529 - CDistNet - INFO - epoch: 0  iter: 22900/26258  loss:  0.819798  lr:  0.000127  eta: 0:57:29
+2026-01-07 06:59:09,825 - CDistNet - INFO - epoch: 0  iter: 23000/26258  loss:  0.820633  lr:  0.000127  eta: 0:55:46
+2026-01-07 07:00:52,309 - CDistNet - INFO - epoch: 0  iter: 23100/26258  loss:  0.784408  lr:  0.000128  eta: 0:54:04
+2026-01-07 07:02:34,905 - CDistNet - INFO - epoch: 0  iter: 23200/26258  loss:  0.793763  lr:  0.000128  eta: 0:52:21
+2026-01-07 07:04:17,253 - CDistNet - INFO - epoch: 0  iter: 23300/26258  loss:  0.796509  lr:  0.000129  eta: 0:50:38
+2026-01-07 07:05:59,981 - CDistNet - INFO - epoch: 0  iter: 23400/26258  loss:  0.814653  lr:  0.000129  eta: 0:48:55
+2026-01-07 07:07:42,233 - CDistNet - INFO - epoch: 0  iter: 23500/26258  loss:  0.810282  lr:  0.000130  eta: 0:47:13
+2026-01-07 07:09:24,534 - CDistNet - INFO - epoch: 0  iter: 23600/26258  loss:  0.815136  lr:  0.000130  eta: 0:45:30
+2026-01-07 07:11:07,165 - CDistNet - INFO - epoch: 0  iter: 23700/26258  loss:  0.826072  lr:  0.000131  eta: 0:43:47
+2026-01-07 07:12:49,675 - CDistNet - INFO - epoch: 0  iter: 23800/26258  loss:  0.850684  lr:  0.000131  eta: 0:42:04
+2026-01-07 07:14:32,137 - CDistNet - INFO - epoch: 0  iter: 23900/26258  loss:  0.841787  lr:  0.000132  eta: 0:40:22
+2026-01-07 07:16:14,630 - CDistNet - INFO - epoch: 0  iter: 24000/26258  loss:  0.817671  lr:  0.000133  eta: 0:38:39
+2026-01-07 07:16:14,798 - CDistNet - INFO - eval_loss:1.6604,eval_acc:0.8022--------
+
+2026-01-07 07:17:57,170 - CDistNet - INFO - epoch: 0  iter: 24100/26258  loss:  0.810189  lr:  0.000133  eta: 0:36:56
+2026-01-07 07:19:39,466 - CDistNet - INFO - epoch: 0  iter: 24200/26258  loss:  0.806669  lr:  0.000134  eta: 0:35:13
+2026-01-07 07:21:21,979 - CDistNet - INFO - epoch: 0  iter: 24300/26258  loss:  0.824733  lr:  0.000134  eta: 0:33:31
+2026-01-07 07:23:04,440 - CDistNet - INFO - epoch: 0  iter: 24400/26258  loss:  0.792131  lr:  0.000135  eta: 0:31:48
+2026-01-07 07:24:46,884 - CDistNet - INFO - epoch: 0  iter: 24500/26258  loss:  0.802313  lr:  0.000135  eta: 0:30:05
+2026-01-07 07:26:28,994 - CDistNet - INFO - epoch: 0  iter: 24600/26258  loss:  0.804484  lr:  0.000136  eta: 0:28:22
+2026-01-07 07:28:11,072 - CDistNet - INFO - epoch: 0  iter: 24700/26258  loss:  0.797202  lr:  0.000136  eta: 0:26:40
+2026-01-07 07:29:53,501 - CDistNet - INFO - epoch: 0  iter: 24800/26258  loss:  0.872938  lr:  0.000137  eta: 0:24:57
+2026-01-07 07:31:35,726 - CDistNet - INFO - epoch: 0  iter: 24900/26258  loss:  0.804566  lr:  0.000138  eta: 0:23:14
+2026-01-07 07:33:17,878 - CDistNet - INFO - epoch: 0  iter: 25000/26258  loss:  0.820324  lr:  0.000138  eta: 0:21:31
+2026-01-07 07:35:00,149 - CDistNet - INFO - epoch: 0  iter: 25100/26258  loss:  0.798207  lr:  0.000139  eta: 0:19:49
+2026-01-07 07:36:42,631 - CDistNet - INFO - epoch: 0  iter: 25200/26258  loss:  0.847791  lr:  0.000139  eta: 0:18:06
+2026-01-07 07:38:24,868 - CDistNet - INFO - epoch: 0  iter: 25300/26258  loss:  0.819010  lr:  0.000140  eta: 0:16:23
+2026-01-07 07:40:06,993 - CDistNet - INFO - epoch: 0  iter: 25400/26258  loss:  0.821630  lr:  0.000140  eta: 0:14:41
+2026-01-07 07:41:49,383 - CDistNet - INFO - epoch: 0  iter: 25500/26258  loss:  0.818888  lr:  0.000141  eta: 0:12:58
+2026-01-07 07:43:32,037 - CDistNet - INFO - epoch: 0  iter: 25600/26258  loss:  0.827543  lr:  0.000141  eta: 0:11:15
+2026-01-07 07:45:14,521 - CDistNet - INFO - epoch: 0  iter: 25700/26258  loss:  0.812129  lr:  0.000142  eta: 0:09:33
+2026-01-07 07:46:57,362 - CDistNet - INFO - epoch: 0  iter: 25800/26258  loss:  0.807341  lr:  0.000143  eta: 0:07:50
+2026-01-07 07:48:40,092 - CDistNet - INFO - epoch: 0  iter: 25900/26258  loss:  0.823482  lr:  0.000143  eta: 0:06:07
+2026-01-07 07:50:23,140 - CDistNet - INFO - epoch: 0  iter: 26000/26258  loss:  0.807417  lr:  0.000144  eta: 0:04:24
+2026-01-07 07:52:05,775 - CDistNet - INFO - epoch: 0  iter: 26100/26258  loss:  0.807466  lr:  0.000144  eta: 0:02:42
+2026-01-07 07:53:48,652 - CDistNet - INFO - epoch: 0  iter: 26200/26258  loss:  0.834420  lr:  0.000145  eta: 0:00:59
+2026-01-07 07:54:47,068 - CDistNet - INFO - Now: best_acc in epoch:0,iteration:16000
+2026-01-07 07:54:47,070 - CDistNet - INFO -   - (Training)   loss:  1.19711, accuracy: 86.185 %, time: 449.418 min
+2026-01-07 07:54:48,247 - CDistNet - INFO - epoch: 1  iter: 0/26258  loss:  0.801587  lr:  0.000145  eta: 8:34:11
+2026-01-07 07:54:48,410 - CDistNet - INFO - eval_loss:1.5796,eval_acc:0.8422--------
+
+2026-01-07 07:54:48,411 - CDistNet - INFO - Saving model: best_acc in epoch:1,iteration:0
+2026-01-07 07:54:48,654 - CDistNet - INFO - Saved!
+2026-01-07 07:56:31,253 - CDistNet - INFO - epoch: 1  iter: 100/26258  loss:  0.874912  lr:  0.000146  eta: 7:29:41
+2026-01-07 07:58:13,647 - CDistNet - INFO - epoch: 1  iter: 200/26258  loss:  0.794846  lr:  0.000146  eta: 7:26:20
+2026-01-07 07:59:56,022 - CDistNet - INFO - epoch: 1  iter: 300/26258  loss:  0.810177  lr:  0.000147  eta: 7:24:03
+2026-01-07 08:01:38,718 - CDistNet - INFO - epoch: 1  iter: 400/26258  loss:  0.800690  lr:  0.000147  eta: 7:22:24
+2026-01-07 08:03:21,156 - CDistNet - INFO - epoch: 1  iter: 500/26258  loss:  0.796898  lr:  0.000148  eta: 7:20:30
+2026-01-07 08:05:04,101 - CDistNet - INFO - epoch: 1  iter: 600/26258  loss:  0.814057  lr:  0.000148  eta: 7:19:02
+2026-01-07 08:06:46,933 - CDistNet - INFO - epoch: 1  iter: 700/26258  loss:  0.808715  lr:  0.000149  eta: 7:17:25
+2026-01-07 08:08:29,377 - CDistNet - INFO - epoch: 1  iter: 800/26258  loss:  0.806927  lr:  0.000149  eta: 7:15:35
+2026-01-07 08:10:11,739 - CDistNet - INFO - epoch: 1  iter: 900/26258  loss:  0.800857  lr:  0.000150  eta: 7:13:44
+2026-01-07 08:11:54,429 - CDistNet - INFO - epoch: 1  iter: 1000/26258  loss:  0.816167  lr:  0.000151  eta: 7:12:03
+2026-01-07 08:13:36,917 - CDistNet - INFO - epoch: 1  iter: 1100/26258  loss:  0.866486  lr:  0.000151  eta: 7:10:17
+2026-01-07 08:15:19,817 - CDistNet - INFO - epoch: 1  iter: 1200/26258  loss:  0.818444  lr:  0.000152  eta: 7:08:40
+2026-01-07 08:17:02,243 - CDistNet - INFO - epoch: 1  iter: 1300/26258  loss:  0.803600  lr:  0.000152  eta: 7:06:53
+2026-01-07 08:18:44,802 - CDistNet - INFO - epoch: 1  iter: 1400/26258  loss:  0.814682  lr:  0.000153  eta: 7:05:09
+2026-01-07 08:20:27,382 - CDistNet - INFO - epoch: 1  iter: 1500/26258  loss:  0.825145  lr:  0.000153  eta: 7:03:26
+2026-01-07 08:22:10,093 - CDistNet - INFO - epoch: 1  iter: 1600/26258  loss:  0.851462  lr:  0.000154  eta: 7:01:45
+2026-01-07 08:23:52,619 - CDistNet - INFO - epoch: 1  iter: 1700/26258  loss:  0.817653  lr:  0.000154  eta: 7:00:01
+2026-01-07 08:25:35,212 - CDistNet - INFO - epoch: 1  iter: 1800/26258  loss:  0.819038  lr:  0.000155  eta: 6:58:18
+2026-01-07 08:27:17,772 - CDistNet - INFO - epoch: 1  iter: 1900/26258  loss:  0.820853  lr:  0.000156  eta: 6:56:34
+2026-01-07 08:29:00,312 - CDistNet - INFO - epoch: 1  iter: 2000/26258  loss:  0.816414  lr:  0.000156  eta: 6:54:51
+2026-01-07 08:30:42,758 - CDistNet - INFO - epoch: 1  iter: 2100/26258  loss:  0.806547  lr:  0.000157  eta: 6:53:06
+2026-01-07 08:32:25,072 - CDistNet - INFO - epoch: 1  iter: 2200/26258  loss:  0.816879  lr:  0.000157  eta: 6:51:21
+2026-01-07 08:34:07,465 - CDistNet - INFO - epoch: 1  iter: 2300/26258  loss:  0.834209  lr:  0.000158  eta: 6:49:36
+2026-01-07 08:35:49,875 - CDistNet - INFO - epoch: 1  iter: 2400/26258  loss:  0.823265  lr:  0.000158  eta: 6:47:52
+2026-01-07 08:37:32,181 - CDistNet - INFO - epoch: 1  iter: 2500/26258  loss:  0.825888  lr:  0.000159  eta: 6:46:06
+2026-01-07 08:39:14,969 - CDistNet - INFO - epoch: 1  iter: 2600/26258  loss:  0.799138  lr:  0.000159  eta: 6:44:26
+2026-01-07 08:40:57,583 - CDistNet - INFO - epoch: 1  iter: 2700/26258  loss:  0.807162  lr:  0.000160  eta: 6:42:44
+2026-01-07 08:42:40,178 - CDistNet - INFO - epoch: 1  iter: 2800/26258  loss:  0.796240  lr:  0.000161  eta: 6:41:01
+2026-01-07 08:44:22,334 - CDistNet - INFO - epoch: 1  iter: 2900/26258  loss:  0.811363  lr:  0.000161  eta: 6:39:15
+2026-01-07 08:46:04,601 - CDistNet - INFO - epoch: 1  iter: 3000/26258  loss:  0.790458  lr:  0.000162  eta: 6:37:31
+2026-01-07 08:47:46,826 - CDistNet - INFO - epoch: 1  iter: 3100/26258  loss:  0.809127  lr:  0.000162  eta: 6:35:46
+2026-01-07 08:49:29,575 - CDistNet - INFO - epoch: 1  iter: 3200/26258  loss:  0.791735  lr:  0.000163  eta: 6:34:05
+2026-01-07 08:51:12,169 - CDistNet - INFO - epoch: 1  iter: 3300/26258  loss:  0.810871  lr:  0.000163  eta: 6:32:22
+2026-01-07 08:52:55,000 - CDistNet - INFO - epoch: 1  iter: 3400/26258  loss:  0.805315  lr:  0.000164  eta: 6:30:42
+2026-01-07 08:54:37,509 - CDistNet - INFO - epoch: 1  iter: 3500/26258  loss:  0.803064  lr:  0.000164  eta: 6:28:59
+2026-01-07 08:56:20,244 - CDistNet - INFO - epoch: 1  iter: 3600/26258  loss:  0.808712  lr:  0.000165  eta: 6:27:17
+2026-01-07 08:58:02,479 - CDistNet - INFO - epoch: 1  iter: 3700/26258  loss:  0.820501  lr:  0.000166  eta: 6:25:33
+2026-01-07 08:59:45,168 - CDistNet - INFO - epoch: 1  iter: 3800/26258  loss:  0.822136  lr:  0.000166  eta: 6:23:51
+2026-01-07 09:01:27,945 - CDistNet - INFO - epoch: 1  iter: 3900/26258  loss:  0.794521  lr:  0.000167  eta: 6:22:10
+2026-01-07 09:03:10,589 - CDistNet - INFO - epoch: 1  iter: 4000/26258  loss:  0.797915  lr:  0.000167  eta: 6:20:28
+2026-01-07 09:03:10,753 - CDistNet - INFO - eval_loss:1.6378,eval_acc:0.8467--------
+
+2026-01-07 09:03:10,754 - CDistNet - INFO - Saving model: best_acc in epoch:1,iteration:4000
+2026-01-07 09:03:11,074 - CDistNet - INFO - Saved!
+2026-01-07 09:04:53,333 - CDistNet - INFO - epoch: 1  iter: 4100/26258  loss:  0.800238  lr:  0.000168  eta: 6:18:46
+2026-01-07 09:06:36,114 - CDistNet - INFO - epoch: 1  iter: 4200/26258  loss:  0.804481  lr:  0.000168  eta: 6:17:05
+2026-01-07 09:08:18,655 - CDistNet - INFO - epoch: 1  iter: 4300/26258  loss:  0.821551  lr:  0.000169  eta: 6:15:22
+2026-01-07 09:10:01,062 - CDistNet - INFO - epoch: 1  iter: 4400/26258  loss:  0.815184  lr:  0.000169  eta: 6:13:39
+2026-01-07 09:11:43,496 - CDistNet - INFO - epoch: 1  iter: 4500/26258  loss:  0.800049  lr:  0.000170  eta: 6:11:55
+2026-01-07 09:13:25,817 - CDistNet - INFO - epoch: 1  iter: 4600/26258  loss:  0.849281  lr:  0.000170  eta: 6:10:12
+2026-01-07 09:15:08,266 - CDistNet - INFO - epoch: 1  iter: 4700/26258  loss:  0.798485  lr:  0.000171  eta: 6:08:29
+2026-01-07 09:16:50,809 - CDistNet - INFO - epoch: 1  iter: 4800/26258  loss:  0.811874  lr:  0.000172  eta: 6:06:46
+2026-01-07 09:18:33,273 - CDistNet - INFO - epoch: 1  iter: 4900/26258  loss:  0.792125  lr:  0.000172  eta: 6:05:03
+2026-01-07 09:20:15,974 - CDistNet - INFO - epoch: 1  iter: 5000/26258  loss:  0.801347  lr:  0.000173  eta: 6:03:21
+2026-01-07 09:21:58,308 - CDistNet - INFO - epoch: 1  iter: 5100/26258  loss:  0.791883  lr:  0.000173  eta: 6:01:38
+2026-01-07 09:23:40,734 - CDistNet - INFO - epoch: 1  iter: 5200/26258  loss:  0.795465  lr:  0.000174  eta: 5:59:55
+2026-01-07 09:25:23,091 - CDistNet - INFO - epoch: 1  iter: 5300/26258  loss:  0.814308  lr:  0.000174  eta: 5:58:11
+2026-01-07 09:27:05,702 - CDistNet - INFO - epoch: 1  iter: 5400/26258  loss:  0.795255  lr:  0.000175  eta: 5:56:29
+2026-01-07 09:28:48,132 - CDistNet - INFO - epoch: 1  iter: 5500/26258  loss:  0.818691  lr:  0.000175  eta: 5:54:46
+2026-01-07 09:30:30,784 - CDistNet - INFO - epoch: 1  iter: 5600/26258  loss:  0.810114  lr:  0.000176  eta: 5:53:04
+2026-01-07 09:32:13,374 - CDistNet - INFO - epoch: 1  iter: 5700/26258  loss:  0.803051  lr:  0.000177  eta: 5:51:21
+2026-01-07 09:33:55,855 - CDistNet - INFO - epoch: 1  iter: 5800/26258  loss:  0.827292  lr:  0.000177  eta: 5:49:39
+2026-01-07 09:35:38,373 - CDistNet - INFO - epoch: 1  iter: 5900/26258  loss:  0.805211  lr:  0.000178  eta: 5:47:56
+2026-01-07 09:37:20,702 - CDistNet - INFO - epoch: 1  iter: 6000/26258  loss:  0.809354  lr:  0.000178  eta: 5:46:13
+2026-01-07 09:39:03,070 - CDistNet - INFO - epoch: 1  iter: 6100/26258  loss:  0.796766  lr:  0.000179  eta: 5:44:30
+2026-01-07 09:40:45,720 - CDistNet - INFO - epoch: 1  iter: 6200/26258  loss:  0.806864  lr:  0.000179  eta: 5:42:47
+2026-01-07 09:42:28,353 - CDistNet - INFO - epoch: 1  iter: 6300/26258  loss:  0.808760  lr:  0.000180  eta: 5:41:05
+2026-01-07 09:44:10,935 - CDistNet - INFO - epoch: 1  iter: 6400/26258  loss:  0.803296  lr:  0.000180  eta: 5:39:23
+2026-01-07 09:45:53,617 - CDistNet - INFO - epoch: 1  iter: 6500/26258  loss:  0.792164  lr:  0.000181  eta: 5:37:41
+2026-01-07 09:47:36,619 - CDistNet - INFO - epoch: 1  iter: 6600/26258  loss:  0.813600  lr:  0.000182  eta: 5:35:59
+2026-01-07 09:49:19,394 - CDistNet - INFO - epoch: 1  iter: 6700/26258  loss:  0.805045  lr:  0.000182  eta: 5:34:18
+2026-01-07 09:51:02,070 - CDistNet - INFO - epoch: 1  iter: 6800/26258  loss:  0.801801  lr:  0.000183  eta: 5:32:35
+2026-01-07 09:52:44,663 - CDistNet - INFO - epoch: 1  iter: 6900/26258  loss:  0.812142  lr:  0.000183  eta: 5:30:53
+2026-01-07 09:54:27,274 - CDistNet - INFO - epoch: 1  iter: 7000/26258  loss:  0.805696  lr:  0.000184  eta: 5:29:10
+2026-01-07 09:56:09,686 - CDistNet - INFO - epoch: 1  iter: 7100/26258  loss:  0.817770  lr:  0.000184  eta: 5:27:27
+2026-01-07 09:57:53,123 - CDistNet - INFO - epoch: 1  iter: 7200/26258  loss:  0.805358  lr:  0.000185  eta: 5:25:47
+2026-01-07 09:59:36,249 - CDistNet - INFO - epoch: 1  iter: 7300/26258  loss:  0.801557  lr:  0.000185  eta: 5:24:06
+2026-01-07 10:01:21,296 - CDistNet - INFO - epoch: 1  iter: 7400/26258  loss:  0.810332  lr:  0.000186  eta: 5:22:30
+2026-01-07 10:03:04,047 - CDistNet - INFO - epoch: 1  iter: 7500/26258  loss:  0.802072  lr:  0.000186  eta: 5:20:48
+2026-01-07 10:04:47,033 - CDistNet - INFO - epoch: 1  iter: 7600/26258  loss:  0.807691  lr:  0.000187  eta: 5:19:06
+2026-01-07 10:06:29,991 - CDistNet - INFO - epoch: 1  iter: 7700/26258  loss:  0.802020  lr:  0.000188  eta: 5:17:24
+2026-01-07 10:08:12,967 - CDistNet - INFO - epoch: 1  iter: 7800/26258  loss:  0.785015  lr:  0.000188  eta: 5:15:42
+2026-01-07 10:09:55,932 - CDistNet - INFO - epoch: 1  iter: 7900/26258  loss:  0.801231  lr:  0.000189  eta: 5:14:00
+2026-01-07 10:11:38,545 - CDistNet - INFO - epoch: 1  iter: 8000/26258  loss:  0.804159  lr:  0.000189  eta: 5:12:18
+2026-01-07 10:11:38,711 - CDistNet - INFO - eval_loss:1.6672,eval_acc:0.8400--------
+
+2026-01-07 10:13:21,733 - CDistNet - INFO - epoch: 1  iter: 8100/26258  loss:  0.814711  lr:  0.000190  eta: 5:10:36
+2026-01-07 10:15:07,386 - CDistNet - INFO - epoch: 1  iter: 8200/26258  loss:  0.796222  lr:  0.000190  eta: 5:09:00
+2026-01-07 10:16:50,239 - CDistNet - INFO - epoch: 1  iter: 8300/26258  loss:  0.824558  lr:  0.000191  eta: 5:07:18
+2026-01-07 10:18:33,177 - CDistNet - INFO - epoch: 1  iter: 8400/26258  loss:  0.822761  lr:  0.000191  eta: 5:05:36
+2026-01-07 10:20:17,601 - CDistNet - INFO - epoch: 1  iter: 8500/26258  loss:  0.803887  lr:  0.000192  eta: 5:03:57
+2026-01-07 10:22:00,416 - CDistNet - INFO - epoch: 1  iter: 8600/26258  loss:  0.797339  lr:  0.000193  eta: 5:02:14
+2026-01-07 10:23:43,009 - CDistNet - INFO - epoch: 1  iter: 8700/26258  loss:  0.808073  lr:  0.000193  eta: 5:00:32
+2026-01-07 10:25:25,923 - CDistNet - INFO - epoch: 1  iter: 8800/26258  loss:  0.800462  lr:  0.000194  eta: 4:58:49
+2026-01-07 10:27:08,445 - CDistNet - INFO - epoch: 1  iter: 8900/26258  loss:  0.799808  lr:  0.000194  eta: 4:57:06
+2026-01-07 10:28:51,460 - CDistNet - INFO - epoch: 1  iter: 9000/26258  loss:  0.792977  lr:  0.000195  eta: 4:55:24
+2026-01-07 10:30:36,660 - CDistNet - INFO - epoch: 1  iter: 9100/26258  loss:  0.782089  lr:  0.000195  eta: 4:53:46
+2026-01-07 10:32:19,389 - CDistNet - INFO - epoch: 1  iter: 9200/26258  loss:  0.797887  lr:  0.000196  eta: 4:52:03
+2026-01-07 10:34:01,732 - CDistNet - INFO - epoch: 1  iter: 9300/26258  loss:  0.803986  lr:  0.000196  eta: 4:50:20
+2026-01-07 10:35:44,312 - CDistNet - INFO - epoch: 1  iter: 9400/26258  loss:  0.815713  lr:  0.000197  eta: 4:48:37
+2026-01-07 10:37:26,870 - CDistNet - INFO - epoch: 1  iter: 9500/26258  loss:  0.798008  lr:  0.000198  eta: 4:46:54
+2026-01-07 10:39:09,544 - CDistNet - INFO - epoch: 1  iter: 9600/26258  loss:  0.790934  lr:  0.000198  eta: 4:45:11
+2026-01-07 10:40:52,035 - CDistNet - INFO - epoch: 1  iter: 9700/26258  loss:  0.805148  lr:  0.000199  eta: 4:43:28
+2026-01-07 10:42:34,513 - CDistNet - INFO - epoch: 1  iter: 9800/26258  loss:  0.782815  lr:  0.000199  eta: 4:41:45
+2026-01-07 10:44:17,025 - CDistNet - INFO - epoch: 1  iter: 9900/26258  loss:  0.794886  lr:  0.000200  eta: 4:40:02
+2026-01-07 10:45:59,627 - CDistNet - INFO - epoch: 1  iter: 10000/26258  loss:  0.796507  lr:  0.000200  eta: 4:38:19
+2026-01-07 10:47:42,099 - CDistNet - INFO - epoch: 1  iter: 10100/26258  loss:  0.832275  lr:  0.000201  eta: 4:36:36
+2026-01-07 10:49:24,660 - CDistNet - INFO - epoch: 1  iter: 10200/26258  loss:  0.797044  lr:  0.000201  eta: 4:34:53
+2026-01-07 10:51:07,270 - CDistNet - INFO - epoch: 1  iter: 10300/26258  loss:  0.790984  lr:  0.000202  eta: 4:33:10
+2026-01-07 10:52:49,886 - CDistNet - INFO - epoch: 1  iter: 10400/26258  loss:  0.809637  lr:  0.000203  eta: 4:31:27
+2026-01-07 10:54:32,501 - CDistNet - INFO - epoch: 1  iter: 10500/26258  loss:  0.791134  lr:  0.000203  eta: 4:29:44
+2026-01-07 10:56:15,355 - CDistNet - INFO - epoch: 1  iter: 10600/26258  loss:  0.790932  lr:  0.000204  eta: 4:28:02
+2026-01-07 10:57:58,066 - CDistNet - INFO - epoch: 1  iter: 10700/26258  loss:  0.795799  lr:  0.000204  eta: 4:26:19
+2026-01-07 10:59:40,900 - CDistNet - INFO - epoch: 1  iter: 10800/26258  loss:  0.800646  lr:  0.000205  eta: 4:24:37
+2026-01-07 11:01:23,703 - CDistNet - INFO - epoch: 1  iter: 10900/26258  loss:  0.800476  lr:  0.000205  eta: 4:22:54
+2026-01-07 11:03:06,372 - CDistNet - INFO - epoch: 1  iter: 11000/26258  loss:  0.810834  lr:  0.000206  eta: 4:21:11
+2026-01-07 11:04:49,090 - CDistNet - INFO - epoch: 1  iter: 11100/26258  loss:  0.785546  lr:  0.000206  eta: 4:19:29
+2026-01-07 11:06:31,763 - CDistNet - INFO - epoch: 1  iter: 11200/26258  loss:  0.810547  lr:  0.000207  eta: 4:17:46
+2026-01-07 11:08:14,509 - CDistNet - INFO - epoch: 1  iter: 11300/26258  loss:  0.844499  lr:  0.000207  eta: 4:16:03
+2026-01-07 11:09:57,173 - CDistNet - INFO - epoch: 1  iter: 11400/26258  loss:  0.788587  lr:  0.000208  eta: 4:14:20
+2026-01-07 11:11:39,872 - CDistNet - INFO - epoch: 1  iter: 11500/26258  loss:  0.800303  lr:  0.000209  eta: 4:12:38
+2026-01-07 11:13:22,533 - CDistNet - INFO - epoch: 1  iter: 11600/26258  loss:  0.803399  lr:  0.000209  eta: 4:10:55
+2026-01-07 11:15:05,181 - CDistNet - INFO - epoch: 1  iter: 11700/26258  loss:  0.791837  lr:  0.000210  eta: 4:09:12
+2026-01-07 11:16:48,006 - CDistNet - INFO - epoch: 1  iter: 11800/26258  loss:  0.817310  lr:  0.000210  eta: 4:07:29
+2026-01-07 11:18:30,581 - CDistNet - INFO - epoch: 1  iter: 11900/26258  loss:  0.795700  lr:  0.000211  eta: 4:05:47
+2026-01-07 11:20:13,177 - CDistNet - INFO - epoch: 1  iter: 12000/26258  loss:  0.793156  lr:  0.000211  eta: 4:04:04
+2026-01-07 11:20:13,341 - CDistNet - INFO - eval_loss:1.6231,eval_acc:0.8378--------
+
+2026-01-07 11:21:56,076 - CDistNet - INFO - epoch: 1  iter: 12100/26258  loss:  0.790966  lr:  0.000212  eta: 4:02:21
+2026-01-07 11:23:38,539 - CDistNet - INFO - epoch: 1  iter: 12200/26258  loss:  0.789424  lr:  0.000212  eta: 4:00:38
+2026-01-07 11:25:20,856 - CDistNet - INFO - epoch: 1  iter: 12300/26258  loss:  0.794523  lr:  0.000213  eta: 3:58:55
+2026-01-07 11:27:03,616 - CDistNet - INFO - epoch: 1  iter: 12400/26258  loss:  0.809530  lr:  0.000214  eta: 3:57:12
+2026-01-07 11:28:46,100 - CDistNet - INFO - epoch: 1  iter: 12500/26258  loss:  0.780358  lr:  0.000214  eta: 3:55:30
+2026-01-07 11:30:28,726 - CDistNet - INFO - epoch: 1  iter: 12600/26258  loss:  0.799179  lr:  0.000215  eta: 3:53:47
+2026-01-07 11:32:11,367 - CDistNet - INFO - epoch: 1  iter: 12700/26258  loss:  0.812162  lr:  0.000215  eta: 3:52:04
+2026-01-07 11:33:54,096 - CDistNet - INFO - epoch: 1  iter: 12800/26258  loss:  0.785798  lr:  0.000216  eta: 3:50:21
+2026-01-07 11:35:36,568 - CDistNet - INFO - epoch: 1  iter: 12900/26258  loss:  0.801451  lr:  0.000216  eta: 3:48:38
+2026-01-07 11:37:19,499 - CDistNet - INFO - epoch: 1  iter: 13000/26258  loss:  0.826183  lr:  0.000217  eta: 3:46:56
+2026-01-07 11:39:02,233 - CDistNet - INFO - epoch: 1  iter: 13100/26258  loss:  0.799596  lr:  0.000217  eta: 3:45:13
+2026-01-07 11:40:44,929 - CDistNet - INFO - epoch: 1  iter: 13200/26258  loss:  0.808983  lr:  0.000218  eta: 3:43:30
+2026-01-07 11:42:27,306 - CDistNet - INFO - epoch: 1  iter: 13300/26258  loss:  0.794302  lr:  0.000219  eta: 3:41:47
+2026-01-07 11:44:09,568 - CDistNet - INFO - epoch: 1  iter: 13400/26258  loss:  0.799688  lr:  0.000219  eta: 3:40:04
+2026-01-07 11:45:52,264 - CDistNet - INFO - epoch: 1  iter: 13500/26258  loss:  0.800076  lr:  0.000220  eta: 3:38:22
+2026-01-07 11:47:34,633 - CDistNet - INFO - epoch: 1  iter: 13600/26258  loss:  0.810035  lr:  0.000220  eta: 3:36:39
+2026-01-07 11:49:17,070 - CDistNet - INFO - epoch: 1  iter: 13700/26258  loss:  0.792972  lr:  0.000221  eta: 3:34:56
+2026-01-07 11:50:59,651 - CDistNet - INFO - epoch: 1  iter: 13800/26258  loss:  0.838064  lr:  0.000221  eta: 3:33:13
+2026-01-07 11:52:42,618 - CDistNet - INFO - epoch: 1  iter: 13900/26258  loss:  0.812494  lr:  0.000221  eta: 3:31:30
+2026-01-07 11:54:25,151 - CDistNet - INFO - epoch: 1  iter: 14000/26258  loss:  0.787887  lr:  0.000220  eta: 3:29:48
+2026-01-07 11:56:07,735 - CDistNet - INFO - epoch: 1  iter: 14100/26258  loss:  0.798290  lr:  0.000220  eta: 3:28:05
+2026-01-07 11:57:49,938 - CDistNet - INFO - epoch: 1  iter: 14200/26258  loss:  0.790729  lr:  0.000220  eta: 3:26:22
+2026-01-07 11:59:32,348 - CDistNet - INFO - epoch: 1  iter: 14300/26258  loss:  0.807401  lr:  0.000219  eta: 3:24:39
+2026-01-07 12:01:14,395 - CDistNet - INFO - epoch: 1  iter: 14400/26258  loss:  0.801505  lr:  0.000219  eta: 3:22:56
+2026-01-07 12:02:56,791 - CDistNet - INFO - epoch: 1  iter: 14500/26258  loss:  0.793372  lr:  0.000219  eta: 3:21:13
+2026-01-07 12:04:40,386 - CDistNet - INFO - epoch: 1  iter: 14600/26258  loss:  0.808583  lr:  0.000219  eta: 3:19:31
+2026-01-07 12:06:24,585 - CDistNet - INFO - epoch: 1  iter: 14700/26258  loss:  0.795358  lr:  0.000218  eta: 3:17:49
+2026-01-07 12:08:07,967 - CDistNet - INFO - epoch: 1  iter: 14800/26258  loss:  0.787709  lr:  0.000218  eta: 3:16:07
+2026-01-07 12:09:51,473 - CDistNet - INFO - epoch: 1  iter: 14900/26258  loss:  0.820107  lr:  0.000218  eta: 3:14:25
+2026-01-07 12:11:34,809 - CDistNet - INFO - epoch: 1  iter: 15000/26258  loss:  0.811160  lr:  0.000218  eta: 3:12:43
+2026-01-07 12:13:17,967 - CDistNet - INFO - epoch: 1  iter: 15100/26258  loss:  0.827543  lr:  0.000217  eta: 3:11:00
+2026-01-07 12:15:01,301 - CDistNet - INFO - epoch: 1  iter: 15200/26258  loss:  0.810395  lr:  0.000217  eta: 3:09:18
+2026-01-07 12:16:44,405 - CDistNet - INFO - epoch: 1  iter: 15300/26258  loss:  0.797244  lr:  0.000217  eta: 3:07:36
+2026-01-07 12:18:27,592 - CDistNet - INFO - epoch: 1  iter: 15400/26258  loss:  0.828434  lr:  0.000217  eta: 3:05:53
+2026-01-07 12:20:10,731 - CDistNet - INFO - epoch: 1  iter: 15500/26258  loss:  0.790315  lr:  0.000216  eta: 3:04:11
+2026-01-07 12:21:53,991 - CDistNet - INFO - epoch: 1  iter: 15600/26258  loss:  0.787286  lr:  0.000216  eta: 3:02:28
+2026-01-07 12:23:36,970 - CDistNet - INFO - epoch: 1  iter: 15700/26258  loss:  0.786979  lr:  0.000216  eta: 3:00:46
+2026-01-07 12:25:20,081 - CDistNet - INFO - epoch: 1  iter: 15800/26258  loss:  0.785270  lr:  0.000215  eta: 2:59:03
+2026-01-07 12:27:02,758 - CDistNet - INFO - epoch: 1  iter: 15900/26258  loss:  0.788304  lr:  0.000215  eta: 2:57:21
+2026-01-07 12:28:45,558 - CDistNet - INFO - epoch: 1  iter: 16000/26258  loss:  0.820879  lr:  0.000215  eta: 2:55:38
+2026-01-07 12:28:45,743 - CDistNet - INFO - eval_loss:1.7551,eval_acc:0.8267--------
+
+2026-01-07 12:30:28,803 - CDistNet - INFO - epoch: 1  iter: 16100/26258  loss:  0.823161  lr:  0.000215  eta: 2:53:56
+2026-01-07 12:32:11,705 - CDistNet - INFO - epoch: 1  iter: 16200/26258  loss:  0.798328  lr:  0.000214  eta: 2:52:13
+2026-01-07 12:33:54,374 - CDistNet - INFO - epoch: 1  iter: 16300/26258  loss:  0.806491  lr:  0.000214  eta: 2:50:30
+2026-01-07 12:35:37,379 - CDistNet - INFO - epoch: 1  iter: 16400/26258  loss:  0.794914  lr:  0.000214  eta: 2:48:48
+2026-01-07 12:37:20,512 - CDistNet - INFO - epoch: 1  iter: 16500/26258  loss:  0.808642  lr:  0.000214  eta: 2:47:05
+2026-01-07 12:39:03,447 - CDistNet - INFO - epoch: 1  iter: 16600/26258  loss:  0.802255  lr:  0.000213  eta: 2:45:22
+2026-01-07 12:40:46,637 - CDistNet - INFO - epoch: 1  iter: 16700/26258  loss:  0.844685  lr:  0.000213  eta: 2:43:40
+2026-01-07 12:42:29,374 - CDistNet - INFO - epoch: 1  iter: 16800/26258  loss:  0.792460  lr:  0.000213  eta: 2:41:57
+2026-01-07 12:44:12,043 - CDistNet - INFO - epoch: 1  iter: 16900/26258  loss:  0.796654  lr:  0.000213  eta: 2:40:14
+2026-01-07 12:45:54,737 - CDistNet - INFO - epoch: 1  iter: 17000/26258  loss:  0.782870  lr:  0.000212  eta: 2:38:32
+2026-01-07 12:47:37,449 - CDistNet - INFO - epoch: 1  iter: 17100/26258  loss:  0.788081  lr:  0.000212  eta: 2:36:49
+2026-01-07 12:49:20,570 - CDistNet - INFO - epoch: 1  iter: 17200/26258  loss:  0.812052  lr:  0.000212  eta: 2:35:06
+2026-01-07 12:51:03,796 - CDistNet - INFO - epoch: 1  iter: 17300/26258  loss:  0.795786  lr:  0.000212  eta: 2:33:24
+2026-01-07 12:52:46,478 - CDistNet - INFO - epoch: 1  iter: 17400/26258  loss:  0.798127  lr:  0.000212  eta: 2:31:41
+2026-01-07 12:54:29,305 - CDistNet - INFO - epoch: 1  iter: 17500/26258  loss:  0.784697  lr:  0.000211  eta: 2:29:58
+2026-01-07 12:56:12,084 - CDistNet - INFO - epoch: 1  iter: 17600/26258  loss:  0.789620  lr:  0.000211  eta: 2:28:16
+2026-01-07 12:57:54,940 - CDistNet - INFO - epoch: 1  iter: 17700/26258  loss:  0.795157  lr:  0.000211  eta: 2:26:33
+2026-01-07 12:59:37,662 - CDistNet - INFO - epoch: 1  iter: 17800/26258  loss:  0.805716  lr:  0.000211  eta: 2:24:50
+2026-01-07 13:01:20,628 - CDistNet - INFO - epoch: 1  iter: 17900/26258  loss:  0.799736  lr:  0.000210  eta: 2:23:07
+2026-01-07 13:03:03,285 - CDistNet - INFO - epoch: 1  iter: 18000/26258  loss:  0.815140  lr:  0.000210  eta: 2:21:25
+2026-01-07 13:04:46,427 - CDistNet - INFO - epoch: 1  iter: 18100/26258  loss:  0.818921  lr:  0.000210  eta: 2:19:42
+2026-01-07 13:06:29,383 - CDistNet - INFO - epoch: 1  iter: 18200/26258  loss:  0.835903  lr:  0.000210  eta: 2:17:59
+2026-01-07 13:08:11,948 - CDistNet - INFO - epoch: 1  iter: 18300/26258  loss:  0.796732  lr:  0.000209  eta: 2:16:17
+2026-01-07 13:09:54,812 - CDistNet - INFO - epoch: 1  iter: 18400/26258  loss:  0.802368  lr:  0.000209  eta: 2:14:34
+2026-01-07 13:11:37,574 - CDistNet - INFO - epoch: 1  iter: 18500/26258  loss:  0.800756  lr:  0.000209  eta: 2:12:51
+2026-01-07 13:13:20,319 - CDistNet - INFO - epoch: 1  iter: 18600/26258  loss:  0.819365  lr:  0.000209  eta: 2:11:08
+2026-01-07 13:15:03,296 - CDistNet - INFO - epoch: 1  iter: 18700/26258  loss:  0.823856  lr:  0.000208  eta: 2:09:26
+2026-01-07 13:16:45,735 - CDistNet - INFO - epoch: 1  iter: 18800/26258  loss:  0.804920  lr:  0.000208  eta: 2:07:43
+2026-01-07 13:18:28,181 - CDistNet - INFO - epoch: 1  iter: 18900/26258  loss:  0.797368  lr:  0.000208  eta: 2:06:00
+2026-01-07 13:20:10,801 - CDistNet - INFO - epoch: 1  iter: 19000/26258  loss:  0.809302  lr:  0.000208  eta: 2:04:17
+2026-01-07 13:21:53,581 - CDistNet - INFO - epoch: 1  iter: 19100/26258  loss:  0.795621  lr:  0.000208  eta: 2:02:34
+2026-01-07 13:23:36,259 - CDistNet - INFO - epoch: 1  iter: 19200/26258  loss:  0.805754  lr:  0.000207  eta: 2:00:52
+2026-01-07 13:25:18,892 - CDistNet - INFO - epoch: 1  iter: 19300/26258  loss:  0.797533  lr:  0.000207  eta: 1:59:09
+2026-01-07 13:27:01,708 - CDistNet - INFO - epoch: 1  iter: 19400/26258  loss:  0.795094  lr:  0.000207  eta: 1:57:26
+2026-01-07 13:28:44,693 - CDistNet - INFO - epoch: 1  iter: 19500/26258  loss:  0.797673  lr:  0.000207  eta: 1:55:43
+2026-01-07 13:30:27,592 - CDistNet - INFO - epoch: 1  iter: 19600/26258  loss:  0.808222  lr:  0.000206  eta: 1:54:01
+2026-01-07 13:32:10,283 - CDistNet - INFO - epoch: 1  iter: 19700/26258  loss:  0.807167  lr:  0.000206  eta: 1:52:18
+2026-01-07 13:33:53,268 - CDistNet - INFO - epoch: 1  iter: 19800/26258  loss:  0.797353  lr:  0.000206  eta: 1:50:35
+2026-01-07 13:35:35,814 - CDistNet - INFO - epoch: 1  iter: 19900/26258  loss:  0.789264  lr:  0.000206  eta: 1:48:52
+2026-01-07 13:37:18,467 - CDistNet - INFO - epoch: 1  iter: 20000/26258  loss:  0.800098  lr:  0.000205  eta: 1:47:10
+2026-01-07 13:37:18,631 - CDistNet - INFO - eval_loss:1.6039,eval_acc:0.8267--------
+
+2026-01-07 13:39:01,312 - CDistNet - INFO - epoch: 1  iter: 20100/26258  loss:  0.799548  lr:  0.000205  eta: 1:45:27
+2026-01-07 13:40:44,263 - CDistNet - INFO - epoch: 1  iter: 20200/26258  loss:  0.795269  lr:  0.000205  eta: 1:43:44
+2026-01-07 13:42:26,964 - CDistNet - INFO - epoch: 1  iter: 20300/26258  loss:  0.791476  lr:  0.000205  eta: 1:42:02
+2026-01-07 13:44:09,587 - CDistNet - INFO - epoch: 1  iter: 20400/26258  loss:  0.815401  lr:  0.000205  eta: 1:40:19
+2026-01-07 13:45:52,186 - CDistNet - INFO - epoch: 1  iter: 20500/26258  loss:  0.797951  lr:  0.000204  eta: 1:38:36
+2026-01-07 13:47:35,261 - CDistNet - INFO - epoch: 1  iter: 20600/26258  loss:  0.806170  lr:  0.000204  eta: 1:36:53
+2026-01-07 13:49:18,150 - CDistNet - INFO - epoch: 1  iter: 20700/26258  loss:  0.798118  lr:  0.000204  eta: 1:35:11
+2026-01-07 13:51:00,838 - CDistNet - INFO - epoch: 1  iter: 20800/26258  loss:  0.798167  lr:  0.000204  eta: 1:33:28
+2026-01-07 13:52:43,760 - CDistNet - INFO - epoch: 1  iter: 20900/26258  loss:  0.803881  lr:  0.000204  eta: 1:31:45
+2026-01-07 13:54:26,272 - CDistNet - INFO - epoch: 1  iter: 21000/26258  loss:  0.805643  lr:  0.000203  eta: 1:30:02
+2026-01-07 13:56:09,313 - CDistNet - INFO - epoch: 1  iter: 21100/26258  loss:  0.807656  lr:  0.000203  eta: 1:28:20
+2026-01-07 13:57:56,047 - CDistNet - INFO - epoch: 1  iter: 21200/26258  loss:  0.788540  lr:  0.000203  eta: 1:26:38
+2026-01-07 13:59:40,352 - CDistNet - INFO - epoch: 1  iter: 21300/26258  loss:  0.803366  lr:  0.000203  eta: 1:24:55
+2026-01-07 14:01:23,882 - CDistNet - INFO - epoch: 1  iter: 21400/26258  loss:  0.804408  lr:  0.000202  eta: 1:23:13
+2026-01-07 14:03:07,484 - CDistNet - INFO - epoch: 1  iter: 21500/26258  loss:  0.851956  lr:  0.000202  eta: 1:21:30
+2026-01-07 14:04:50,852 - CDistNet - INFO - epoch: 1  iter: 21600/26258  loss:  0.792614  lr:  0.000202  eta: 1:19:47
+2026-01-07 14:06:39,144 - CDistNet - INFO - epoch: 1  iter: 21700/26258  loss:  0.792505  lr:  0.000202  eta: 1:18:06
+2026-01-07 14:08:28,371 - CDistNet - INFO - epoch: 1  iter: 21800/26258  loss:  0.791467  lr:  0.000202  eta: 1:16:24
+2026-01-07 14:10:14,357 - CDistNet - INFO - epoch: 1  iter: 21900/26258  loss:  0.801709  lr:  0.000201  eta: 1:14:42
+2026-01-07 14:11:57,961 - CDistNet - INFO - epoch: 1  iter: 22000/26258  loss:  0.836993  lr:  0.000201  eta: 1:12:59
+2026-01-07 14:13:41,134 - CDistNet - INFO - epoch: 1  iter: 22100/26258  loss:  0.799569  lr:  0.000201  eta: 1:11:17
+2026-01-07 14:15:24,384 - CDistNet - INFO - epoch: 1  iter: 22200/26258  loss:  0.794589  lr:  0.000201  eta: 1:09:34
+2026-01-07 14:17:07,745 - CDistNet - INFO - epoch: 1  iter: 22300/26258  loss:  0.798934  lr:  0.000201  eta: 1:07:51
+2026-01-07 14:18:50,704 - CDistNet - INFO - epoch: 1  iter: 22400/26258  loss:  0.792665  lr:  0.000200  eta: 1:06:08
+2026-01-07 14:20:33,387 - CDistNet - INFO - epoch: 1  iter: 22500/26258  loss:  0.790783  lr:  0.000200  eta: 1:04:25
+2026-01-07 14:22:16,326 - CDistNet - INFO - epoch: 1  iter: 22600/26258  loss:  0.804678  lr:  0.000200  eta: 1:02:42
+2026-01-07 14:23:59,887 - CDistNet - INFO - epoch: 1  iter: 22700/26258  loss:  0.797749  lr:  0.000200  eta: 1:01:00
+2026-01-07 14:25:44,566 - CDistNet - INFO - epoch: 1  iter: 22800/26258  loss:  0.791752  lr:  0.000200  eta: 0:59:17
+2026-01-07 14:27:28,375 - CDistNet - INFO - epoch: 1  iter: 22900/26258  loss:  0.821182  lr:  0.000199  eta: 0:57:34
+2026-01-07 14:29:12,166 - CDistNet - INFO - epoch: 1  iter: 23000/26258  loss:  0.788277  lr:  0.000199  eta: 0:55:52
+2026-01-07 14:30:56,880 - CDistNet - INFO - epoch: 1  iter: 23100/26258  loss:  0.807347  lr:  0.000199  eta: 0:54:09
+2026-01-07 14:32:40,636 - CDistNet - INFO - epoch: 1  iter: 23200/26258  loss:  0.800604  lr:  0.000199  eta: 0:52:26
+2026-01-07 14:34:23,874 - CDistNet - INFO - epoch: 1  iter: 23300/26258  loss:  0.793885  lr:  0.000199  eta: 0:50:43
+2026-01-07 14:36:07,231 - CDistNet - INFO - epoch: 1  iter: 23400/26258  loss:  0.802300  lr:  0.000198  eta: 0:49:00
+2026-01-07 14:37:50,381 - CDistNet - INFO - epoch: 1  iter: 23500/26258  loss:  0.783082  lr:  0.000198  eta: 0:47:18
+2026-01-07 14:39:33,715 - CDistNet - INFO - epoch: 1  iter: 23600/26258  loss:  0.817630  lr:  0.000198  eta: 0:45:35
+2026-01-07 14:41:16,710 - CDistNet - INFO - epoch: 1  iter: 23700/26258  loss:  0.794792  lr:  0.000198  eta: 0:43:52
+2026-01-07 14:42:59,868 - CDistNet - INFO - epoch: 1  iter: 23800/26258  loss:  0.798726  lr:  0.000198  eta: 0:42:09
+2026-01-07 14:44:43,466 - CDistNet - INFO - epoch: 1  iter: 23900/26258  loss:  0.783829  lr:  0.000197  eta: 0:40:26
+2026-01-07 14:46:26,815 - CDistNet - INFO - epoch: 1  iter: 24000/26258  loss:  0.795259  lr:  0.000197  eta: 0:38:43
+2026-01-07 14:46:27,002 - CDistNet - INFO - eval_loss:1.7082,eval_acc:0.8200--------
+
+2026-01-07 14:48:10,076 - CDistNet - INFO - epoch: 1  iter: 24100/26258  loss:  0.778480  lr:  0.000197  eta: 0:37:00
+2026-01-07 14:49:55,628 - CDistNet - INFO - epoch: 1  iter: 24200/26258  loss:  0.789204  lr:  0.000197  eta: 0:35:18
+2026-01-07 14:51:40,917 - CDistNet - INFO - epoch: 1  iter: 24300/26258  loss:  0.804171  lr:  0.000197  eta: 0:33:35
+2026-01-07 14:53:24,056 - CDistNet - INFO - epoch: 1  iter: 24400/26258  loss:  0.784914  lr:  0.000196  eta: 0:31:52
+2026-01-07 14:55:08,067 - CDistNet - INFO - epoch: 1  iter: 24500/26258  loss:  0.794459  lr:  0.000196  eta: 0:30:09
+2026-01-07 14:56:51,338 - CDistNet - INFO - epoch: 1  iter: 24600/26258  loss:  0.798469  lr:  0.000196  eta: 0:28:26
+2026-01-07 14:58:35,076 - CDistNet - INFO - epoch: 1  iter: 24700/26258  loss:  0.792476  lr:  0.000196  eta: 0:26:43
+2026-01-07 15:00:19,674 - CDistNet - INFO - epoch: 1  iter: 24800/26258  loss:  0.781888  lr:  0.000196  eta: 0:25:01
+2026-01-07 15:02:03,205 - CDistNet - INFO - epoch: 1  iter: 24900/26258  loss:  0.793175  lr:  0.000195  eta: 0:23:18
+2026-01-07 15:03:46,487 - CDistNet - INFO - epoch: 1  iter: 25000/26258  loss:  0.820034  lr:  0.000195  eta: 0:21:35
+2026-01-07 15:05:30,114 - CDistNet - INFO - epoch: 1  iter: 25100/26258  loss:  0.814798  lr:  0.000195  eta: 0:19:52
+2026-01-07 15:07:13,775 - CDistNet - INFO - epoch: 1  iter: 25200/26258  loss:  0.801824  lr:  0.000195  eta: 0:18:09
+2026-01-07 15:08:56,883 - CDistNet - INFO - epoch: 1  iter: 25300/26258  loss:  0.811360  lr:  0.000195  eta: 0:16:26
+2026-01-07 15:10:40,105 - CDistNet - INFO - epoch: 1  iter: 25400/26258  loss:  0.793357  lr:  0.000194  eta: 0:14:43
+2026-01-07 15:12:23,231 - CDistNet - INFO - epoch: 1  iter: 25500/26258  loss:  0.802702  lr:  0.000194  eta: 0:13:00
+2026-01-07 15:14:06,546 - CDistNet - INFO - epoch: 1  iter: 25600/26258  loss:  0.800637  lr:  0.000194  eta: 0:11:17
+2026-01-07 15:15:49,708 - CDistNet - INFO - epoch: 1  iter: 25700/26258  loss:  0.785229  lr:  0.000194  eta: 0:09:34
+2026-01-07 15:17:32,798 - CDistNet - INFO - epoch: 1  iter: 25800/26258  loss:  0.823365  lr:  0.000194  eta: 0:07:51
+2026-01-07 15:19:15,838 - CDistNet - INFO - epoch: 1  iter: 25900/26258  loss:  0.790789  lr:  0.000194  eta: 0:06:08
+2026-01-07 15:20:58,991 - CDistNet - INFO - epoch: 1  iter: 26000/26258  loss:  0.795260  lr:  0.000193  eta: 0:04:25
+2026-01-07 15:22:42,076 - CDistNet - INFO - epoch: 1  iter: 26100/26258  loss:  0.785580  lr:  0.000193  eta: 0:02:42
+2026-01-07 15:24:25,200 - CDistNet - INFO - epoch: 1  iter: 26200/26258  loss:  0.797428  lr:  0.000193  eta: 0:00:59
+2026-01-07 15:25:25,074 - CDistNet - INFO - Now: best_acc in epoch:1,iteration:4000
+2026-01-07 15:25:25,078 - CDistNet - INFO -   - (Training)   loss:  0.80460, accuracy: 98.876 %, time: 450.633 min
+2026-01-07 15:25:26,320 - CDistNet - INFO - epoch: 2  iter: 0/26258  loss:  0.784716  lr:  0.000193  eta: 9:02:49
+2026-01-07 15:25:26,488 - CDistNet - INFO - eval_loss:1.9469,eval_acc:0.8422--------
+
+2026-01-07 15:25:26,488 - CDistNet - INFO - Saving model: best_acc in epoch:2,iteration:0
+2026-01-07 15:25:26,842 - CDistNet - INFO - Saved!
+2026-01-07 15:27:10,553 - CDistNet - INFO - epoch: 2  iter: 100/26258  loss:  0.790291  lr:  0.000193  eta: 7:35:16
+2026-01-07 15:28:54,495 - CDistNet - INFO - epoch: 2  iter: 200/26258  loss:  0.827054  lr:  0.000192  eta: 7:32:28
+2026-01-07 15:30:40,159 - CDistNet - INFO - epoch: 2  iter: 300/26258  loss:  0.792447  lr:  0.000192  eta: 7:32:52
+2026-01-07 15:32:24,342 - CDistNet - INFO - epoch: 2  iter: 400/26258  loss:  0.804935  lr:  0.000192  eta: 7:30:35
+2026-01-07 15:34:07,665 - CDistNet - INFO - epoch: 2  iter: 500/26258  loss:  0.782526  lr:  0.000192  eta: 7:27:47
+2026-01-07 15:35:52,014 - CDistNet - INFO - epoch: 2  iter: 600/26258  loss:  0.801618  lr:  0.000192  eta: 7:26:05
+2026-01-07 15:37:36,033 - CDistNet - INFO - epoch: 2  iter: 700/26258  loss:  0.796207  lr:  0.000192  eta: 7:24:10
+2026-01-07 15:39:20,176 - CDistNet - INFO - epoch: 2  iter: 800/26258  loss:  0.805314  lr:  0.000191  eta: 7:22:21
+2026-01-07 15:41:04,051 - CDistNet - INFO - epoch: 2  iter: 900/26258  loss:  0.793308  lr:  0.000191  eta: 7:20:26
+2026-01-07 15:42:49,042 - CDistNet - INFO - epoch: 2  iter: 1000/26258  loss:  0.814210  lr:  0.000191  eta: 7:19:02
+2026-01-07 15:44:36,354 - CDistNet - INFO - epoch: 2  iter: 1100/26258  loss:  0.849801  lr:  0.000191  eta: 7:18:26
+2026-01-07 15:46:22,056 - CDistNet - INFO - epoch: 2  iter: 1200/26258  loss:  0.809486  lr:  0.000191  eta: 7:17:05
+2026-01-07 15:48:06,148 - CDistNet - INFO - epoch: 2  iter: 1300/26258  loss:  0.802138  lr:  0.000191  eta: 7:15:10
+2026-01-07 15:49:50,458 - CDistNet - INFO - epoch: 2  iter: 1400/26258  loss:  0.799388  lr:  0.000190  eta: 7:13:20
+2026-01-07 15:51:34,642 - CDistNet - INFO - epoch: 2  iter: 1500/26258  loss:  0.822552  lr:  0.000190  eta: 7:11:28
+2026-01-07 15:53:18,818 - CDistNet - INFO - epoch: 2  iter: 1600/26258  loss:  0.826728  lr:  0.000190  eta: 7:09:38
+2026-01-07 15:55:03,102 - CDistNet - INFO - epoch: 2  iter: 1700/26258  loss:  0.814994  lr:  0.000190  eta: 7:07:49
+2026-01-07 15:56:48,141 - CDistNet - INFO - epoch: 2  iter: 1800/26258  loss:  0.797240  lr:  0.000190  eta: 7:06:12
+2026-01-07 15:58:32,404 - CDistNet - INFO - epoch: 2  iter: 1900/26258  loss:  0.800447  lr:  0.000189  eta: 7:04:24
+2026-01-07 16:00:16,563 - CDistNet - INFO - epoch: 2  iter: 2000/26258  loss:  0.791322  lr:  0.000189  eta: 7:02:34
+2026-01-07 16:02:00,605 - CDistNet - INFO - epoch: 2  iter: 2100/26258  loss:  0.779080  lr:  0.000189  eta: 7:00:44
+2026-01-07 16:03:45,225 - CDistNet - INFO - epoch: 2  iter: 2200/26258  loss:  0.787588  lr:  0.000189  eta: 6:59:01
+2026-01-07 16:05:30,697 - CDistNet - INFO - epoch: 2  iter: 2300/26258  loss:  0.798690  lr:  0.000189  eta: 6:57:27
+2026-01-07 16:07:16,404 - CDistNet - INFO - epoch: 2  iter: 2400/26258  loss:  0.798945  lr:  0.000189  eta: 6:55:54
+2026-01-07 16:09:01,568 - CDistNet - INFO - epoch: 2  iter: 2500/26258  loss:  0.793773  lr:  0.000188  eta: 6:54:15
+2026-01-07 16:10:47,086 - CDistNet - INFO - epoch: 2  iter: 2600/26258  loss:  0.794320  lr:  0.000188  eta: 6:52:38
+2026-01-07 16:12:32,813 - CDistNet - INFO - epoch: 2  iter: 2700/26258  loss:  0.801401  lr:  0.000188  eta: 6:51:03
+2026-01-07 16:14:18,720 - CDistNet - INFO - epoch: 2  iter: 2800/26258  loss:  0.808002  lr:  0.000188  eta: 6:49:28
+2026-01-07 16:16:04,259 - CDistNet - INFO - epoch: 2  iter: 2900/26258  loss:  0.800287  lr:  0.000188  eta: 6:47:50
+2026-01-07 16:17:48,469 - CDistNet - INFO - epoch: 2  iter: 3000/26258  loss:  0.807949  lr:  0.000188  eta: 6:46:01
+2026-01-07 16:19:32,308 - CDistNet - INFO - epoch: 2  iter: 3100/26258  loss:  0.801029  lr:  0.000187  eta: 6:44:09
+2026-01-07 16:21:15,562 - CDistNet - INFO - epoch: 2  iter: 3200/26258  loss:  0.794828  lr:  0.000187  eta: 6:42:14
+2026-01-07 16:22:59,153 - CDistNet - INFO - epoch: 2  iter: 3300/26258  loss:  0.807138  lr:  0.000187  eta: 6:40:22
+2026-01-07 16:24:42,683 - CDistNet - INFO - epoch: 2  iter: 3400/26258  loss:  0.791634  lr:  0.000187  eta: 6:38:30
+2026-01-07 16:26:26,995 - CDistNet - INFO - epoch: 2  iter: 3500/26258  loss:  0.789820  lr:  0.000187  eta: 6:36:43
+2026-01-07 16:28:10,637 - CDistNet - INFO - epoch: 2  iter: 3600/26258  loss:  0.805215  lr:  0.000187  eta: 6:34:53
+2026-01-07 16:29:54,194 - CDistNet - INFO - epoch: 2  iter: 3700/26258  loss:  0.807075  lr:  0.000186  eta: 6:33:02
+2026-01-07 16:31:37,601 - CDistNet - INFO - epoch: 2  iter: 3800/26258  loss:  0.802461  lr:  0.000186  eta: 6:31:11
+2026-01-07 16:33:20,913 - CDistNet - INFO - epoch: 2  iter: 3900/26258  loss:  0.799313  lr:  0.000186  eta: 6:29:20
+2026-01-07 16:35:04,480 - CDistNet - INFO - epoch: 2  iter: 4000/26258  loss:  0.807081  lr:  0.000186  eta: 6:27:30
+2026-01-07 16:35:04,670 - CDistNet - INFO - eval_loss:1.6251,eval_acc:0.8444--------
+
+2026-01-07 16:35:04,670 - CDistNet - INFO - Saving model: best_acc in epoch:2,iteration:4000
+2026-01-07 16:35:05,513 - CDistNet - INFO - Saved!
+2026-01-07 16:36:48,748 - CDistNet - INFO - epoch: 2  iter: 4100/26258  loss:  0.778463  lr:  0.000186  eta: 6:25:44
+2026-01-07 16:38:31,744 - CDistNet - INFO - epoch: 2  iter: 4200/26258  loss:  0.797456  lr:  0.000186  eta: 6:23:52
+2026-01-07 16:40:15,107 - CDistNet - INFO - epoch: 2  iter: 4300/26258  loss:  0.787492  lr:  0.000185  eta: 6:22:03
+2026-01-07 16:41:58,453 - CDistNet - INFO - epoch: 2  iter: 4400/26258  loss:  0.796784  lr:  0.000185  eta: 6:20:13
+2026-01-07 16:43:41,814 - CDistNet - INFO - epoch: 2  iter: 4500/26258  loss:  0.803616  lr:  0.000185  eta: 6:18:24
+2026-01-07 16:45:25,042 - CDistNet - INFO - epoch: 2  iter: 4600/26258  loss:  0.811078  lr:  0.000185  eta: 6:16:34
+2026-01-07 16:47:08,057 - CDistNet - INFO - epoch: 2  iter: 4700/26258  loss:  0.787240  lr:  0.000185  eta: 6:14:44
+2026-01-07 16:48:51,226 - CDistNet - INFO - epoch: 2  iter: 4800/26258  loss:  0.801778  lr:  0.000185  eta: 6:12:54
+2026-01-07 16:50:34,761 - CDistNet - INFO - epoch: 2  iter: 4900/26258  loss:  0.791411  lr:  0.000184  eta: 6:11:07
+2026-01-07 16:52:17,851 - CDistNet - INFO - epoch: 2  iter: 5000/26258  loss:  0.783388  lr:  0.000184  eta: 6:09:18
+2026-01-07 16:54:01,134 - CDistNet - INFO - epoch: 2  iter: 5100/26258  loss:  0.788459  lr:  0.000184  eta: 6:07:29
+2026-01-07 16:55:44,003 - CDistNet - INFO - epoch: 2  iter: 5200/26258  loss:  0.787517  lr:  0.000184  eta: 6:05:40
+2026-01-07 16:57:27,016 - CDistNet - INFO - epoch: 2  iter: 5300/26258  loss:  0.787636  lr:  0.000184  eta: 6:03:51
+2026-01-07 16:59:09,812 - CDistNet - INFO - epoch: 2  iter: 5400/26258  loss:  0.809550  lr:  0.000184  eta: 6:02:02
+2026-01-07 17:00:52,690 - CDistNet - INFO - epoch: 2  iter: 5500/26258  loss:  0.796000  lr:  0.000183  eta: 6:00:13
+2026-01-07 17:02:35,817 - CDistNet - INFO - epoch: 2  iter: 5600/26258  loss:  0.792492  lr:  0.000183  eta: 5:58:25
+2026-01-07 17:04:18,523 - CDistNet - INFO - epoch: 2  iter: 5700/26258  loss:  0.800988  lr:  0.000183  eta: 5:56:36
+2026-01-07 17:06:01,363 - CDistNet - INFO - epoch: 2  iter: 5800/26258  loss:  0.795930  lr:  0.000183  eta: 5:54:47
+2026-01-07 17:07:44,748 - CDistNet - INFO - epoch: 2  iter: 5900/26258  loss:  0.803824  lr:  0.000183  eta: 5:53:01
+2026-01-07 17:09:27,563 - CDistNet - INFO - epoch: 2  iter: 6000/26258  loss:  0.793827  lr:  0.000183  eta: 5:51:13
+2026-01-07 17:11:12,682 - CDistNet - INFO - epoch: 2  iter: 6100/26258  loss:  0.793999  lr:  0.000183  eta: 5:49:32
+2026-01-07 17:12:59,360 - CDistNet - INFO - epoch: 2  iter: 6200/26258  loss:  0.792253  lr:  0.000182  eta: 5:47:57
+2026-01-07 17:14:44,197 - CDistNet - INFO - epoch: 2  iter: 6300/26258  loss:  0.786190  lr:  0.000182  eta: 5:46:15
+2026-01-07 17:16:29,244 - CDistNet - INFO - epoch: 2  iter: 6400/26258  loss:  0.794132  lr:  0.000182  eta: 5:44:34
+2026-01-07 17:18:13,311 - CDistNet - INFO - epoch: 2  iter: 6500/26258  loss:  0.844262  lr:  0.000182  eta: 5:42:50
+2026-01-07 17:19:57,365 - CDistNet - INFO - epoch: 2  iter: 6600/26258  loss:  0.810906  lr:  0.000182  eta: 5:41:05
+2026-01-07 17:21:41,071 - CDistNet - INFO - epoch: 2  iter: 6700/26258  loss:  0.788711  lr:  0.000182  eta: 5:39:20
+2026-01-07 17:23:24,476 - CDistNet - INFO - epoch: 2  iter: 6800/26258  loss:  0.797529  lr:  0.000181  eta: 5:37:34
+2026-01-07 17:25:07,845 - CDistNet - INFO - epoch: 2  iter: 6900/26258  loss:  0.832918  lr:  0.000181  eta: 5:35:48
+2026-01-07 17:26:51,538 - CDistNet - INFO - epoch: 2  iter: 7000/26258  loss:  0.788636  lr:  0.000181  eta: 5:34:03
+2026-01-07 17:28:35,193 - CDistNet - INFO - epoch: 2  iter: 7100/26258  loss:  0.783279  lr:  0.000181  eta: 5:32:17
+2026-01-07 17:30:18,456 - CDistNet - INFO - epoch: 2  iter: 7200/26258  loss:  0.778668  lr:  0.000181  eta: 5:30:31
+2026-01-07 17:32:02,053 - CDistNet - INFO - epoch: 2  iter: 7300/26258  loss:  0.786983  lr:  0.000181  eta: 5:28:46
+2026-01-07 17:33:45,051 - CDistNet - INFO - epoch: 2  iter: 7400/26258  loss:  0.787572  lr:  0.000181  eta: 5:26:59
+2026-01-07 17:35:28,378 - CDistNet - INFO - epoch: 2  iter: 7500/26258  loss:  0.798542  lr:  0.000180  eta: 5:25:13
+2026-01-07 17:37:11,724 - CDistNet - INFO - epoch: 2  iter: 7600/26258  loss:  0.797240  lr:  0.000180  eta: 5:23:28
+2026-01-07 17:38:54,786 - CDistNet - INFO - epoch: 2  iter: 7700/26258  loss:  0.794741  lr:  0.000180  eta: 5:21:41
+2026-01-07 17:40:37,779 - CDistNet - INFO - epoch: 2  iter: 7800/26258  loss:  0.797374  lr:  0.000180  eta: 5:19:55
+2026-01-07 17:42:20,848 - CDistNet - INFO - epoch: 2  iter: 7900/26258  loss:  0.814167  lr:  0.000180  eta: 5:18:09
+2026-01-07 17:44:04,230 - CDistNet - INFO - epoch: 2  iter: 8000/26258  loss:  0.810611  lr:  0.000180  eta: 5:16:23
+2026-01-07 17:44:04,450 - CDistNet - INFO - eval_loss:0.7772,eval_acc:0.9980--------
+
+2026-01-07 17:44:04,450 - CDistNet - INFO - Saving model: best_acc in epoch:2,iteration:8000
+2026-01-07 17:44:04,795 - CDistNet - INFO - Saved!
+2026-01-07 17:45:47,887 - CDistNet - INFO - epoch: 2  iter: 8100/26258  loss:  0.791434  lr:  0.000180  eta: 5:14:39
+2026-01-07 17:47:31,261 - CDistNet - INFO - epoch: 2  iter: 8200/26258  loss:  0.791399  lr:  0.000179  eta: 5:12:54

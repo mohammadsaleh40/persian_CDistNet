@@ -1,0 +1,747 @@
+filename,surya_prediction,pytesseract_prediction,cdistnet_prediction,ground_truth
+0000_16.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",16
+0001_۱۰۰۰۰.jpg,Error: Invalid device id,992,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",۱۰۰۰۰
+0002_۳۰۰.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",۳۰۰
+0003_۱۲.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",۱۲
+0004_۱۶.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",۱۶
+0005_پمپ.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",پمپ
+0006_ساعت.jpg,Error: Invalid device id,aye,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",ساعت
+0007_۲۴.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",۲۴
+0008_ساعت.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",ساعت
+0009_تخلیه.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",تخلیه
+0010_زمینی.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",زمینی
+0011_ابران.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",ابران
+0012_۲۰.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",۲۰ 
+0013_جمهوری.jpg,Error: Invalid device id,"wor,","Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",جمهوری
+0014_تاریخ.jpg,Error: Invalid device id,ناریخ,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",تاریخ
+0015_ارزشیابی.jpg,Error: Invalid device id,ارزشیابی:,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",ارزشیابی:
+0016_آبان.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",آبان
+0017_۱۴۰۴.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",۱۴۰۴
+0018_پرورش.jpg,Error: Invalid device id,مود ل,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",پرورش
+0019_زمان.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",زمان
+0020_پاسخگویی۰.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",پاسخگویی۰
+0021_۴۰.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",۴۰
+0022_دقیقه.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",دقیقه
+0023_تخلیه.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",تخلیه
+0024_ساعت.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",ساعت
+0025_می_شودر.jpg,Error: Invalid device id,"N
+YS","Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",می‌شودر
+0026_پمپ.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",پمپ
+0027_پمپ.jpg,Error: Invalid device id,"۰
+
+=f","Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",پمپ
+0028_ساعت.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",ساعت
+0029_هزار.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",هزار
+0030_تومان.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",تومان
+0031_تومان.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",تومان
+0032_نیا.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",نیا
+0033_مهدوی.jpg,Error: Invalid device id,Geer,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",مهدوی
+0034_۱۶.jpg,Error: Invalid device id,ly,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",۱۶
+0035_۳۰۰.jpg,Error: Invalid device id,Voe,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",۳۰۰
+0036_۲۰۰۰_۰۰۰.jpg,Error: Invalid device id,۵ ۵ مرو و۳,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",۲۰۰۰،۰۰۰
+0037_۶۰۰.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",۶۰۰
+0038_ساعت.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",ساعت
+0039_کیلوگرم.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",کیلوگرم
+0040_ساعت.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",ساعت
+0041_ب.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",ب
+0042_کیلو.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",کیلو
+0043_پمپ.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",پمپ
+0044_تومان.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",تومان
+0045_پانصد.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",پانصد
+0046_نصف.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",نصف
+0047_تومان.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",تومان
+0048__نام_و_نام_خانوادگی.jpg,Error: Invalid device id,نام و نام‌خانوادگی»,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).", نام و نام خانوادگی :
+0049_دوم_خوارزمی_شهرستان_گناباد.jpg,Error: Invalid device id,دوم خوارزمی شهرستان گناباد,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",دوم خوارزمی شهرستان گناباد
+0050_نام_ونام_خانوادگی.jpg,Error: Invalid device id,نام و نام خانوادگی؛,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",نام ونام خانوادگی :
+0051_متوسطه_دوره_دوم_خوارزمی.jpg,Error: Invalid device id,متوسطه دوره دوم خوارزمی,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",متوسطه دوره دوم خوارزمی
+0052_ایران.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",ایران
+0053_سایر.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",سایر
+0054_کشور.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",کشور
+0055_در.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",در
+0056_چه.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",چه
+0057_هم.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",هم
+0058_پل.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",پل
+0059_دولت.jpg,Error: Invalid device id,ay),"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",دولت
+0060_چه.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",چه
+0061_آموزش.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",آموزش
+0062_هایی.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",هایی
+0063_در.jpg,Error: Invalid device id,rs,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",در
+0064_دارد.jpg,Error: Invalid device id,yh,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",دارد
+0065_6.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",6
+0066_7.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",7
+0067_4.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",4
+0068_نکته.jpg,Error: Invalid device id,mae,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",نکته
+0069_در.jpg,Error: Invalid device id,۲,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",در
+0070_ورقه.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",ورقه
+0071_در.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",در
+0072_سربی.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",سربی
+0073_نفوذ.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",نفوذ
+0074_می_کند.jpg,Error: Invalid device id,۹,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",می‌کند
+0075_از.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",از
+0076_می_شوند.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",می‌شوند
+0077_نیمه.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",نیمه
+0078_پرتو.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",پرتو
+0079_وارد.jpg,Error: Invalid device id,ورد,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",وارد
+0080_مثبت.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",مثبت
+0081_دارند.jpg,Error: Invalid device id,rls,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",دارند
+0082_بردارند.jpg,Error: Invalid device id,"۰
+
+i) of","Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",بردارند
+0083_جدی.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",جدی
+0084_آسیب.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",آسیب
+0085_باعث.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",باعث
+0086_است.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",است
+0087_تعداد.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",تعداد
+0088_سپری.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",سپری
+0089_و.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",و
+0090_بسیارکم.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",بسیارکم
+0091_مدت.jpg,Error: Invalid device id,هر,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",مدت
+0092_زمانی.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",زمانی
+0093_که.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",که
+0094_طول.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",طول
+0095_می_کشد.jpg,Error: Invalid device id,3,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",می‌کشد
+0096_تا.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",تا
+0097_یک.jpg,Error: Invalid device id,۹,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",یک
+0098_ماده.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",ماده
+0099_رادیواکتیو.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",رادیواکتیو
+0100_نصف.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",نصف
+0101_شود.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",شود
+0102_نکته.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",نکته
+0103_اغلب.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",اغلب
+0104_هسته.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",هسته
+0105_ها.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",ها
+0106_پس.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",پس
+0107_از.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",از
+0108_واپاشی.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",واپاشی
+0109_آلفا.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",آلفا
+0110_یا.jpg,Error: Invalid device id,|,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",یا
+0111_بتا.jpg,Error: Invalid device id,IC,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",بتا
+0112_برانگیخته.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",برانگیخته
+0113_می_شوند.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",می‌شوند
+0114_که.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",که
+0115_با.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",با
+0116_تابش.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",تابش
+0117_در.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",در
+0118_به.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",به
+0119_حالت.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",حالت
+0120_پایه.jpg,Error: Invalid device id,aS,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",پایه
+0121_می_روند.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",می‌روند
+0122_سیستم.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",سیستم
+0123_دود.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",دود
+0124_برای.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",برای
+0125_حریق.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",حریق
+0126_استفاده.jpg,Error: Invalid device id,اس ده,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",استفاده
+0127_می_شوند.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",می‌شوند
+0128_آشکار.jpg,Error: Invalid device id,"سح رز
+| صعی م","Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",آشکار
+0129_ساز.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",ساز
+0130_نکته.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",نکته
+0131_آخرین.jpg,Error: Invalid device id,3,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",آخرین
+0132_هسته.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",هسته
+0133_پایدار.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",پایدار
+0134_در.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",در
+0135_جدول.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",جدول
+0136_تناوبی.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",تناوبی
+0137_با.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",با
+0138_عدد.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",عدد
+0139_اتمی.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",اتمی
+0140_است.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",است
+0141_درمیان.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",درمیان
+0142_عناصر.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",عناصر
+0143_ناپایدار.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",ناپایدار
+0144_فقط.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",فقط
+0145_توریم.jpg,Error: Invalid device id,,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",توریم
+0146_وارورانیوم.jpg,Error: Invalid device id,را وا سوم,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",وارورانیوم
+0147_تنها.jpg,Error: Invalid device id,۱,"Error: Error(s) in loading state_dict for CDistNet:
+	size mismatch for visual_branch.transform.LocalizationNetwork.conv.0.weight: copying a param with shape torch.Size([64, 1, 3, 3]) from checkpoint, the shape in current model is torch.Size([64, 3, 3, 3]).
+	size mismatch for visual_branch.transform.GridGenerator.P_hat: copying a param with shape torch.Size([4608, 23]) from checkpoint, the shape in current model is torch.Size([1536, 23]).
+	size mismatch for semantic_branch.embedding.embedding.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).
+	size mismatch for tgt_word_prj.weight: copying a param with shape torch.Size([81, 512]) from checkpoint, the shape in current model is torch.Size([36, 512]).",تنها

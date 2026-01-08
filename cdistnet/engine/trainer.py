@@ -121,7 +121,7 @@ def train(model,
                 logger.info("Saving model: best_acc in epoch:{},iteration:{}".format(best_epoch,best_iteration))
                 torch.save(model.module.state_dict(), '{}/epoch{}_best_acc.pth'.format(model_dir, epoch))
                 logger.info("Saved!")
-            if epoch > 8:
+            if epoch > 0:
                 logger.info("Saving last epoch model in epoch:{},iteration:{}".format(epoch, iteration))
                 torch.save(model.module.state_dict(), '{}/epoch{}_iter{}.pth'.format(model_dir, epoch,iteration))
                 logger.info("Saved!")
@@ -220,7 +220,7 @@ def do_train(model,
 
         # eval & save
         start = time.time()
-        if epoch >= 6:
+        if epoch >= 0:
             logger.info("Start eval ...")
             val_loss, val_accu = eval(
                 model=model,
