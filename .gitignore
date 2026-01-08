@@ -37,3 +37,4 @@ models/tps_persian_cdistnet_128_36/epoch7_best_acc.pth
 models/tps_persian_cdistnet_128_36/epoch0_best_acc.pth
 models/6_font_tps_persian_cdistnet_128_36/epoch0_best_acc.pth
 models/tps_persian_cdistnet_128_36/
+models/6_font_tps_persian_cdistnet_128_36/
